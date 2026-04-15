@@ -24,37 +24,62 @@ const Testimonials = () => {
   return (
     <section className="w-full py-24 bg-dark-800/20 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="mb-16">
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-16"
+        >
           <h2 className="text-3xl lg:text-5xl font-bold text-white">Don't Just Take<br/><span className="text-gradient">Our Word For It.</span></h2>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((t, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.15, duration: 0.5 }}
-              className="glass-card p-8 flex flex-col justify-between h-full"
+              transition={{ delay: idx * 0.15, duration: 0.6 }}
+              whileHover={{ y: -5 }}
+              className="glass-card p-8 flex flex-col justify-between h-full group"
             >
               <div>
-                <div className="flex gap-1 mb-6">
+                <motion.div 
+                   initial={{ opacity: 0 }}
+                   whileInView={{ opacity: 1 }}
+                   viewport={{ once: true }}
+                   transition={{ delay: idx * 0.15 + 0.3 }}
+                   className="flex gap-1 mb-6"
+                >
                   {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-primary-500 text-primary-500" />)}
-                </div>
-                <p className="text-lg text-white font-medium leading-relaxed mb-8">
+                </motion.div>
+                <motion.p 
+                   initial={{ opacity: 0 }}
+                   whileInView={{ opacity: 1 }}
+                   viewport={{ once: true }}
+                   transition={{ delay: idx * 0.15 + 0.4 }}
+                   className="text-lg text-white font-medium leading-relaxed mb-8"
+                >
                   "{t.quote}"
-                </p>
+                </motion.p>
               </div>
-              <div className="flex items-center gap-4 border-t border-white/10 pt-6">
-                <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center">
-                   <span className="text-neutral-400 font-bold">{t.author.charAt(0)}</span>
+              <motion.div 
+                 initial={{ opacity: 0, x: -10 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 viewport={{ once: true }}
+                 transition={{ delay: idx * 0.15 + 0.5 }}
+                 className="flex items-center gap-4 border-t border-white/10 pt-6"
+              >
+                <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center group-hover:bg-primary-500/20 transition-colors">
+                   <span className="text-neutral-400 font-bold group-hover:text-primary-400">{t.author.charAt(0)}</span>
                 </div>
                 <div>
                   <h4 className="text-white font-bold">{t.author}</h4>
                   <p className="text-neutral-500 text-sm">{t.role}</p>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

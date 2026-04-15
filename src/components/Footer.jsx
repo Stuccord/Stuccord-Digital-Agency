@@ -10,8 +10,8 @@ const Footer = () => {
           
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center bg-black">
-                <img src="/favicon.png" alt="Stuccord Logo" className="w-full h-full object-contain" />
+              <div className="w-10 h-10 rounded-lg overflow-hidden border border-white/10 flex items-center justify-center bg-transparent">
+                <img src="/logo.jpg" alt="Stuccord Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-2xl font-bold tracking-tight text-white uppercase">Stuccord</span>
             </div>
@@ -19,10 +19,10 @@ const Footer = () => {
               We engineer premium digital experiences, scale-ready SaaS solutions, and data-driven growth strategies.
             </p>
             <div className="space-y-3 mb-8 text-sm text-neutral-400">
-               <p className="flex items-center gap-2 hover:text-primary-400 transition-colors cursor-pointer">
-                 <span className="w-4 h-4 bg-primary-500/20 rounded flex items-center justify-center text-primary-400 text-[10px]">📞</span>
-                 (+233) 054-530-6677
-               </p>
+                <p className="flex items-center gap-2 hover:text-primary-400 transition-colors cursor-pointer">
+                  <span className="w-4 h-4 bg-primary-500/20 rounded flex items-center justify-center text-primary-400 text-[10px]">📞</span>
+                  (+233) 054-758-1168
+                </p>
                <p className="flex items-center gap-2 hover:text-primary-400 transition-colors cursor-pointer">
                  <span className="w-4 h-4 bg-primary-500/20 rounded flex items-center justify-center text-primary-400 text-[10px]">✉️</span>
                  contact@stuccord.com

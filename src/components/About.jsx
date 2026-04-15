@@ -13,27 +13,54 @@ const About = () => {
            viewport={{ once: true }}
            transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight"
+          >
             We Don't Just Build Websites. <br/>
             <span className="text-gradient">We Build Businesses.</span>
-          </h2>
-          <p className="text-neutral-400 text-lg mb-8 leading-relaxed">
-            In a crowded digital landscape, blending in is failing. At Stuccord, we combine world-class design, robust engineering, and revenue-focused marketing to create digital touchpoints that dominate.
-          </p>
-          <p className="text-neutral-400 text-lg mb-10 leading-relaxed">
-            We exist to make you the undeniable leader in your space—turning casual visitors into fiercely loyal customers through exceptional digital experiences.
-          </p>
+          </motion.h2>
           
-          <Link to="/about" className="group flex items-center gap-2 text-primary-400 font-bold text-lg hover:text-primary-300 transition-colors">
-            Uncover Our Story <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-          </Link>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-neutral-400 text-lg mb-8 leading-relaxed"
+          >
+            In a crowded digital landscape, blending in is failing. At Stuccord, we combine world-class design, robust engineering, and revenue-focused marketing to create digital touchpoints that dominate.
+          </motion.p>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-neutral-400 text-lg mb-10 leading-relaxed"
+          >
+            We exist to make you the undeniable leader in your space—turning casual visitors into fiercely loyal customers through exceptional digital experiences.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            <Link to="/about" className="group flex items-center gap-2 text-primary-400 font-bold text-lg hover:text-primary-300 transition-colors">
+              Uncover Our Story <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            </Link>
+          </motion.div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="relative glass-card rounded-[3rem] p-12 lg:p-16 overflow-hidden aspect-square flex flex-col justify-end group shadow-2xl"
         >
           {/* Real Background Image with Overlay */}
@@ -47,19 +74,37 @@ const About = () => {
           </div>
 
           <div className="relative z-10">
-            <div className="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 mb-8 border border-primary-500/20">
+            <motion.div 
+               initial={{ opacity: 0, scale: 0 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               transition={{ type: "spring", stiffness: 200, delay: 0.6 }}
+               className="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 mb-8 border border-primary-500/20"
+            >
               <Quote className="w-8 h-8" fill="currentColor" />
-            </div>
-            <p className="text-2xl lg:text-3xl font-medium text-white italic leading-relaxed mb-8">
+            </motion.div>
+            <motion.p 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.6, delay: 0.7 }}
+               className="text-2xl lg:text-3xl font-medium text-white italic leading-relaxed mb-8"
+            >
               “The future belongs to brands that treat their digital presence like their most valuable asset.”
-            </p>
-            <div className="flex items-center gap-4">
+            </motion.p>
+            <motion.div 
+               initial={{ opacity: 0, x: -20 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.6, delay: 0.8 }}
+               className="flex items-center gap-4"
+            >
               <div className="w-12 h-12 rounded-full bg-primary-600 flex items-center justify-center font-bold text-white shadow-lg shadow-primary-500/20">SL</div>
               <div>
                 <p className="text-white font-bold">Stuccord Leadership</p>
                 <p className="text-neutral-500 text-sm">Vision & Strategy</p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

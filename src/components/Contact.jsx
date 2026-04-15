@@ -79,9 +79,9 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-primary-400 group-hover:bg-primary-500 group-hover:text-white transition-all">
                 <Phone className="w-6 h-6" />
               </div>
-              <a href="tel:+2330545306677" className="block">
+              <a href="tel:+233547581168" className="block">
                 <p className="text-neutral-500 text-sm font-medium">Call/WhatsApp</p>
-                <p className="text-white text-lg font-bold">(+233) 054-530-6677</p>
+                <p className="text-white text-lg font-bold">(+233) 054-758-1168</p>
               </a>
             </div>
 

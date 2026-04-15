@@ -22,14 +22,32 @@ const CTA = () => {
          <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-transparent"></div>
          
          <div className="relative z-10">
-           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6">
+           <motion.h2 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.2, duration: 0.6 }}
+             className="text-4xl lg:text-6xl font-bold text-white mb-6"
+           >
              Ready to Re-invent Your <br/>Digital Presence?
-           </h2>
-           <p className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto">
+           </motion.h2>
+           <motion.p 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.3, duration: 0.6 }}
+             className="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto"
+           >
              Stop settling for average. Let's build something exceptional that commands your market and converts.
-           </p>
+           </motion.p>
            
-           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+           <motion.div 
+             initial={{ opacity: 0, y: 20 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true }}
+             transition={{ delay: 0.4, duration: 0.6 }}
+             className="flex flex-col sm:flex-row items-center justify-center gap-6"
+           >
              <Link 
                to="/contact" 
                className="group inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-dark-900 text-lg font-bold rounded-full overflow-hidden hover:bg-neutral-200 transition-colors shadow-xl shadow-white/10"
@@ -43,7 +61,7 @@ const CTA = () => {
              >
                Schedule a Call
              </Link>
-           </div>
+           </motion.div>
          </div>
        </motion.div>
     </section>

@@ -30,53 +30,73 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/">
+        <Link 
+          to="/" 
+          className="z-50"
+          onClick={() => {
+            if (location.pathname === '/') {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+          }}
+        >
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-3"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="flex items-center gap-3 cursor-pointer"
           >
-            <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg border border-white/10 flex items-center justify-center bg-black">
-              <img src="/favicon.png" alt="Stuccord Logo" className="w-full h-full object-contain" />
+            <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg border border-white/10 flex items-center justify-center bg-transparent group">
+              <img src="/logo.jpg" alt="Stuccord Logo" className="w-full h-full object-contain transition-transform group-hover:rotate-12" />
             </div>
             <span className="text-2xl font-bold tracking-tight text-white uppercase">Stuccord</span>
           </motion.div>
         </Link>
 
         {/* Desktop Nav */}
-        <motion.nav 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="hidden md:flex items-center gap-8"
-        >
-          {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path}
-              className={`text-sm font-medium transition-colors ${
-                location.pathname === link.path ? 'text-primary-400' : 'text-neutral-300 hover:text-white'
-              }`}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link, i) => (
+            <motion.div
+              key={link.name}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 + (i * 0.1) }}
             >
-              {link.name}
-            </Link>
+              <Link 
+                to={link.path}
+                className={`text-sm font-medium transition-colors relative group ${
+                  location.pathname === link.path ? 'text-primary-400' : 'text-neutral-300 hover:text-white'
+                }`}
+              >
+                {link.name}
+                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`}></span>
+              </Link>
+            </motion.div>
           ))}
-        </motion.nav>
+        </nav>
 
         {/* CTA */}
-        <motion.div 
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="hidden md:flex items-center gap-4"
-        >
-          <Link to="/schedule" className="text-sm font-bold text-neutral-400 hover:text-white transition-colors">
-            Schedule Call
-          </Link>
-          <Link to="/contact" className="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-primary-500 text-white text-sm font-semibold rounded-full overflow-hidden hover:bg-primary-600 transition-colors">
-            <span>Get Started</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </motion.div>
+        <div className="hidden md:flex items-center gap-6">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+          >
+            <Link to="/schedule" className="text-sm font-bold text-neutral-400 hover:text-white transition-colors">
+              Schedule Call
+            </Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, type: "spring", stiffness: 200 }}
+          >
+            <Link to="/contact" className="group relative inline-flex items-center gap-2 px-6 py-2.5 bg-primary-500 text-white text-sm font-semibold rounded-full overflow-hidden hover:bg-primary-600 transition-colors shadow-lg shadow-primary-500/20">
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
+        </div>
 
         {/* Mobile Menu Button */}
         <button 

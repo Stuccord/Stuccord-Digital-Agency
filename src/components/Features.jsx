@@ -29,27 +29,50 @@ const Features = () => {
   return (
     <section className="w-full py-24 bg-dark-900 border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center max-w-3xl mx-auto mb-16"
+        >
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">The <span className="text-primary-400">Stuccord</span> Standard.</h2>
           <p className="text-lg text-neutral-400">Why top-tier brands choose us to lead their digital transformations.</p>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="flex flex-col items-center text-center p-6"
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              whileHover={{ y: -5 }}
+              className="flex flex-col items-center text-center p-6 group cursor-default"
             >
               <div className="w-20 h-20 rounded-2xl glass flex items-center justify-center mb-6 relative hover:rotate-6 transition-transform duration-300">
-                <div className="absolute inset-0 bg-primary-500/20 rounded-2xl blur-xl"></div>
+                <div className="absolute inset-0 bg-primary-500/10 rounded-2xl blur-xl group-hover:bg-primary-500/20 transition-colors"></div>
                 <div className="relative z-10">{item.icon}</div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{item.title}</h3>
-              <p className="text-neutral-400">{item.desc}</p>
+              <motion.h3 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 + 0.3 }}
+                className="text-xl font-bold text-white mb-3"
+              >
+                {item.title}
+              </motion.h3>
+              <motion.p 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 + 0.4 }}
+                className="text-neutral-400"
+              >
+                {item.desc}
+              </motion.p>
             </motion.div>
           ))}
         </div>

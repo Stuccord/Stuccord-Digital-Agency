@@ -9,6 +9,7 @@ import ProjectDetailPage from './pages/ProjectDetailPage';
 import FAQPage from './pages/FAQPage';
 import CareersPage from './pages/CareersPage';
 import SchedulePage from './pages/SchedulePage';
+import BrandAssetGenerator from './pages/BrandAssetGenerator';
 import Contact from './components/Contact';
 
 // Scroll to top on page change
@@ -34,6 +35,7 @@ function App() {
           <Route path="/faqs" element={<FAQPage />} />
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/schedule" element={<SchedulePage />} />
+          <Route path="/brand-assets" element={<BrandAssetGenerator />} />
           <Route path="/contact" element={<div className="pt-24 min-h-screen container mx-auto"><Contact /></div>} />
           {/* Fallback 404 */}
           <Route path="*" element={
