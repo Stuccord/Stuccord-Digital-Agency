@@ -28,62 +28,123 @@ const faqs = [
 const FAQPage = () => {
   const [active, setActive] = useState(null);
 
-  return (
-    <div className="pt-32 pb-32 min-h-screen container mx-auto px-6 lg:px-8">
-      <div className="flex flex-col items-center text-center mb-20">
-        <div className="w-16 h-16 rounded-2xl bg-primary-500/10 flex items-center justify-center text-primary-500 mb-6">
-           <HelpCircle className="w-8 h-8" />
-        </div>
-        <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">Frequently Asked <span className="text-primary-400">Questions.</span></h1>
-        <p className="text-xl text-neutral-400 max-w-2xl">Everything you need to know about partnering with Stuccord for your next digital breakthrough.</p>
-      </div>
+  // SEO Schema for Google "People Also Ask"
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
 
-      <div className="max-w-3xl mx-auto space-y-4">
-        {faqs.map((faq, i) => (
-          <div key={i} className="glass-card overflow-hidden border border-white/5 transition-all hover:border-white/10">
-            <button 
-              onClick={() => setActive(active === i ? null : i)}
-              className="w-full flex items-center justify-between p-6 text-left transition-colors"
+  return (
+    <div className="pt-24 min-h-screen relative overflow-hidden bg-dark-950">
+      {/* SEO Structured Data */}
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
+      />
+
+      {/* Cinematic Backgrounds */}
+      <div className="absolute inset-0 noise z-0 opacity-20"></div>
+      <div className="absolute top-[10%] left-[-5%] w-[600px] h-[600px] bg-primary-500/5 rounded-full blur-[150px]"></div>
+      <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[150px]"></div>
+
+      <section className="relative z-10 py-24 px-6 lg:px-8 max-w-7xl mx-auto text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }} 
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="px-4 py-1.5 rounded-full glass border border-primary-500/20 text-primary-400 font-bold uppercase tracking-[0.3em] text-[10px] lg:text-xs mb-8 inline-block">
+             Knowledge Stratum
+          </span>
+          <h1 className="text-5xl lg:text-8xl font-black text-white italic leading-[0.85] tracking-tight mb-8">
+            Frequently Asked <br />
+            <span className="text-gradient">Questions.</span>
+          </h1>
+          <p className="text-xl text-neutral-400 max-w-3xl mx-auto mb-20 leading-relaxed font-medium">
+            Everything you need to know about partnering with Stuccord for your next digital breakthrough. Engineered for transparency.
+          </p>
+        </motion.div>
+
+        <div className="max-w-4xl mx-auto space-y-6 text-left">
+          {faqs.map((faq, i) => (
+            <motion.div 
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="group relative"
             >
-              <span className="text-lg font-bold text-white">{faq.q}</span>
-              <div className="w-8 h-8 bg-white/5 rounded-full flex items-center justify-center text-neutral-400">
-                {active === i ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
-              </div>
-            </button>
-            <AnimatePresence>
-              {active === i && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="overflow-hidden"
+              <div className={`absolute -inset-0.5 bg-gradient-to-r from-primary-500/20 to-transparent rounded-3xl blur transition-all duration-500 ${active === i ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></div>
+              
+              <div className={`relative glass rounded-3xl border transition-all duration-500 overflow-hidden ${active === i ? 'border-primary-500/50' : 'border-white/5 group-hover:border-white/20'}`}>
+                <button 
+                  onClick={() => setActive(active === i ? null : i)}
+                  className="w-full flex items-center justify-between p-8 text-left transition-colors"
                 >
-                  <div className="px-6 pb-6 text-neutral-400 leading-relaxed border-t border-white/5 pt-4">
-                    {faq.a}
+                  <span className={`text-xl font-black italic tracking-tight transition-colors duration-500 ${active === i ? 'text-primary-400' : 'text-white'}`}>
+                    {faq.q}
+                  </span>
+                  <div className={`w-10 h-10 rounded-full flex items-center justify-center border transition-all duration-500 ${active === i ? 'bg-primary-500 border-primary-500 text-dark-950 rotate-90' : 'bg-white/5 border-white/10 text-neutral-400 group-hover:text-white'}`}>
+                    <Plus className={`w-5 h-5 transition-transform duration-500 ${active === i ? 'rotate-45' : ''}`} />
                   </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-        ))}
-      </div>
-      
-      {/* Visual Support */}
-      <div className="mt-32 relative aspect-[21/9] rounded-[3rem] overflow-hidden border border-white/10 glass-card p-12 flex items-center justify-center text-center">
-         <img 
-           src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200" 
-           className="absolute inset-0 w-full h-full object-cover opacity-20"
-           alt="Stuccord Office"
-         />
-         <div className="relative z-10">
-            <h2 className="text-3xl font-bold text-white mb-4">Still have questions?</h2>
-            <p className="text-neutral-400 mb-8">Out team at contact@stuccord.com is ready to help.</p>
-            <a href="/contact" className="px-8 py-3 bg-primary-500 text-white font-bold rounded-full hover:bg-primary-600 transition-all shadow-lg shadow-primary-500/20">
-              Get in Touch
-            </a>
-         </div>
-      </div>
+                </button>
+
+                <AnimatePresence>
+                  {active === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                      <div className="px-8 pb-8 text-neutral-400 leading-relaxed font-medium text-lg border-t border-white/5 pt-6">
+                        <motion.p
+                          initial={{ y: 10 }}
+                          animate={{ y: 0 }}
+                          transition={{ delay: 0.1 }}
+                        >
+                          {faq.a}
+                        </motion.p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Support Section */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="mt-32 relative aspect-[16/6] md:aspect-[21/6] rounded-[3rem] overflow-hidden border border-white/10 glass p-12 flex items-center justify-center group"
+        >
+           <div className="absolute inset-0 bg-primary-500/5 z-0"></div>
+           <div className="absolute inset-0 noise opacity-10 pointer-events-none"></div>
+           
+           <div className="relative z-10 text-center max-w-2xl px-6">
+              <h2 className="text-3xl lg:text-5xl font-black text-white italic mb-6 tracking-tight">Still have <span className="text-gradient">questions?</span></h2>
+              <p className="text-neutral-400 mb-10 text-lg font-medium">Our team at <span className="text-primary-400 font-bold">CONTACT@STUCCORD.COM</span> is ready to transmit answers.</p>
+              <Link 
+                to="/contact" 
+                className="inline-flex px-10 py-5 bg-primary-500 text-dark-950 font-black uppercase text-[12px] tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary-500/30"
+              >
+                Get in Touch
+              </Link>
+           </div>
+        </motion.div>
+      </section>
     </div>
   );
 };
