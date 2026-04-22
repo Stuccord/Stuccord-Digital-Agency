@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 
 const faqs = [
