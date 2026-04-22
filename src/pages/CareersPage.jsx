@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Briefcase, MapPin, Clock, ArrowRight, X, User, Mail, Link as LinkIcon, FileText, CheckCircle } from 'lucide-react';
+import { Briefcase, MapPin, Clock, ArrowRight, X, User, Mail, Link as LinkIcon, FileText, CheckCircle, Zap } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { EMAIL_CONFIG } from '../config/emailConfig';
 import SEO from '../components/SEO';
