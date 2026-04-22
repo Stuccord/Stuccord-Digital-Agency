@@ -200,13 +200,13 @@ const SchedulePage = () => {
                          <div className="space-y-4">
                             <div className="relative">
                                <User className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
-                               <input name="name" type="text" required placeholder="Full Name" className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary-500" />
+                               <input name="name" type="text" required placeholder="Full Name" className="w-full bg-dark-800 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary-500 shadow-inner" />
                             </div>
                             <div className="relative">
                                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
-                               <input name="email" type="email" required placeholder="Work Email" className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary-500" />
+                               <input name="email" type="email" required placeholder="Work Email" className="w-full bg-dark-800 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary-500 shadow-inner" />
                             </div>
-                            <textarea name="notes" placeholder="Briefly describe your objectives..." className="w-full bg-white/5 border border-white/10 rounded-xl py-4 px-4 text-white h-32 focus:outline-none focus:border-primary-500 resize-none"></textarea>
+                            <textarea name="notes" placeholder="Briefly describe your objectives..." className="w-full bg-dark-800 border border-white/10 rounded-xl py-4 px-4 text-white h-32 focus:outline-none focus:border-primary-500 resize-none shadow-inner"></textarea>
                          </div>
                          <button type="submit" disabled={isSubmitting} className="w-full py-5 bg-primary-500 text-white font-bold rounded-xl shadow-xl shadow-primary-500/20 hover:bg-primary-600 transition-all">
                             {isSubmitting ? 'Securing Slot...' : 'Confirm Strategy Session'}

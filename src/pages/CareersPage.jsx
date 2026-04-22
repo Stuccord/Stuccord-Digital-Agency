@@ -162,20 +162,20 @@ const CareersPage = () => {
                       <div className="grid md:grid-cols-2 gap-8">
                          <div className="relative group/field">
                             <User className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-600 group-focus-within/field:text-primary-500 transition-colors" />
-                            <input required name="name" type="text" placeholder="Full Identity" className="w-full bg-dark-950/50 border border-white/10 rounded-2xl py-5 pl-14 pr-6 text-sm text-white focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700" />
+                             <input required name="name" type="text" placeholder="Full Identity" className="w-full bg-dark-900 border border-white/10 rounded-2xl py-5 pl-14 pr-6 text-sm text-white focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700 shadow-inner" />
                          </div>
                          <div className="relative group/field">
                             <Mail className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-600 group-focus-within/field:text-primary-500 transition-colors" />
-                            <input required name="email" type="email" placeholder="Communication Port (Email)" className="w-full bg-dark-950/50 border border-white/10 rounded-2xl py-5 pl-14 pr-6 text-sm text-white focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700" />
+                             <input required name="email" type="email" placeholder="Communication Port (Email)" className="w-full bg-dark-900 border border-white/10 rounded-2xl py-5 pl-14 pr-6 text-sm text-white focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700 shadow-inner" />
                          </div>
                       </div>
                       <div className="relative group/field">
                          <LinkIcon className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-600 group-focus-within/field:text-primary-500 transition-colors" />
-                         <input required name="resume" type="url" placeholder="Intelligence Archive (Portfolio or Resume Link)" className="w-full bg-dark-950/50 border border-white/10 rounded-2xl py-5 pl-14 pr-6 text-sm text-white focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700" />
+                          <input required name="resume" type="url" placeholder="Intelligence Archive (Portfolio or Resume Link)" className="w-full bg-dark-900 border border-white/10 rounded-2xl py-5 pl-14 pr-6 text-sm text-white focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700 shadow-inner" />
                       </div>
                       <div className="relative group/field">
                          <FileText className="absolute left-6 top-6 w-4 h-4 text-neutral-600 group-focus-within/field:text-primary-500 transition-colors" />
-                         <textarea name="notes" placeholder="Transmission Notes: Why are you a non-linear thinker?" className="w-full bg-dark-950/50 border border-white/10 rounded-2xl py-6 pl-14 pr-6 text-sm text-white h-40 focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700 resize-none"></textarea>
+                          <textarea name="notes" placeholder="Transmission Notes: Why are you a non-linear thinker?" className="w-full bg-dark-900 border border-white/10 rounded-2xl py-6 pl-14 pr-6 text-sm text-white h-40 focus:outline-none focus:border-primary-500/50 transition-all placeholder:text-neutral-700 resize-none shadow-inner"></textarea>
                       </div>
 
                       <button 
