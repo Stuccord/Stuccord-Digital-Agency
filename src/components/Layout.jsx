@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
 
       <Navbar />
       
-      <main className="relative z-10 flex flex-col w-full">
+      <main className="relative flex flex-col w-full">
         {children}
       </main>
 
