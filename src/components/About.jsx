@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <section id="about" className="w-full py-32 container mx-auto px-6 lg:px-8">
+    <section id="philosophy" className="w-full py-32 container mx-auto px-6 lg:px-8">
       <div className="grid lg:grid-cols-2 gap-20 items-center">
         <motion.div
            initial={{ opacity: 0, x: -30 }}

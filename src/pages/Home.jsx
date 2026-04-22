@@ -10,9 +10,15 @@ import Testimonials from '../components/Testimonials';
 import ContactSection from '../components/Contact'; // Note: Renamed export or usage
 import CTA from '../components/CTA';
 
+import SEO from '../components/SEO';
+
 const Home = () => {
   return (
     <>
+      <SEO 
+        title="Premium Digital Engineering & SaaS Development" 
+        description="Stuccord engineers elite digital experiences and scale-ready SaaS solutions for industry leaders." 
+      />
       <Hero />
       <Trust />
       <About />

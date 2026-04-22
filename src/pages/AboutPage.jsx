@@ -2,9 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Globe, Award, Shield } from 'lucide-react';
 
+import SEO from '../components/SEO';
+
 const AboutPage = () => {
   return (
     <div className="pt-24 min-h-screen relative overflow-hidden">
+      <SEO 
+        title="Our Story, Vision & Leadership" 
+        description="Learn about Stuccord's mission to disrupt the digital landscape through world-class design and elite engineering integrity." 
+      />
       {/* Background Overlay Image */}
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
          <img 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const portfolioItems = [
   {
@@ -64,6 +65,10 @@ const PortfolioPage = () => {
 
   return (
     <div className="pt-24 min-h-screen relative overflow-hidden bg-dark-950">
+      <SEO 
+        title="Portfolio & Success Stories" 
+        description="Explore our curated gallery of premium digital products, high-conversion ecosystems, and transformative brand identities." 
+      />
       {/* Cinematic Backgrounds */}
       <div className="absolute inset-0 noise z-0 opacity-20"></div>
       <div className="absolute top-[20%] left-[-10%] w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-[150px]"></div>

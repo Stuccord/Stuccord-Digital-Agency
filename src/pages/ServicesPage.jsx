@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Layout, Palette, LineChart, Shield, Database, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const services = [
   {
@@ -45,6 +46,10 @@ const services = [
 const ServicesPage = () => {
   return (
     <div className="pt-24 min-h-screen relative overflow-hidden bg-dark-950">
+      <SEO 
+        title="Digital Solutions & SaaS Engineering" 
+        description="Comprehensive full-stack digital services including SaaS development, high-performance web design, and strategic SEO positioning." 
+      />
       {/* Cinematic Backgrounds */}
       <div className="absolute inset-0 noise z-0 opacity-20"></div>
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/2"></div>
