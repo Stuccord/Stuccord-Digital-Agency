@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Briefcase, MapPin, Clock, ArrowRight, X, User, Mail, Link as LinkIcon, FileText, CheckCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { EMAIL_CONFIG } from '../config/emailConfig';
+import SEO from '../components/SEO';
 
 const jobs = [
   { title: 'Senior Full-Stack Developer', type: 'Full-time', location: 'Remote / Accra', salary: '$60k - $90k' },
@@ -58,6 +59,10 @@ const CareersPage = () => {
 
   return (
     <div className="pt-24 min-h-screen relative overflow-hidden bg-dark-950">
+      <SEO 
+        title="Careers & Engineering Opportunities" 
+        description="Join the Stuccord team. We are looking for non-linear thinkers, technical masters, and creative obsessives to build the future of digital business." 
+      />
       {/* Cinematic Backgrounds */}
       <div className="absolute inset-0 noise z-0 opacity-20"></div>
       <div className="absolute top-[10%] right-[-5%] w-[700px] h-[700px] bg-primary-500/5 rounded-full blur-[150px]"></div>

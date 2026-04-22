@@ -4,6 +4,7 @@ import { Calendar as CalendarIcon, Clock, Video, Globe, ArrowRight, CheckCircle,
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { EMAIL_CONFIG } from '../config/emailConfig';
+import SEO from '../components/SEO';
 
 const months = [
   "January", "February", "March", "April", "May", "June",
@@ -104,6 +105,10 @@ const SchedulePage = () => {
 
   return (
     <div className="pt-32 pb-32 min-h-screen container mx-auto px-6 lg:px-8">
+      <SEO 
+        title="Schedule a Strategy Call" 
+        description="Book a discovery session with Stuccord's leadership team to discuss your next digital breakthrough." 
+      />
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }}>
            <h1 className="text-4xl lg:text-7xl font-bold text-white mb-8 leading-tight">

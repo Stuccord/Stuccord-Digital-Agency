@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Shield, Zap, Target, CheckCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const projects = {
   'finscale-pro': {
@@ -75,6 +76,10 @@ const ProjectDetailPage = () => {
 
   return (
     <div className="pt-32 pb-32 min-h-screen">
+      <SEO 
+        title={`${project.title} | Case Study`} 
+        description={project.desc} 
+      />
       <div className="container mx-auto px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <Link to="/portfolio" className="flex items-center gap-2 text-primary-400 font-bold mb-12 hover:text-white transition-colors group">

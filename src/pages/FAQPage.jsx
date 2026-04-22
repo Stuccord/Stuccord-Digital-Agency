@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus, HelpCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const faqs = [
   {
@@ -44,6 +45,10 @@ const FAQPage = () => {
 
   return (
     <div className="pt-24 min-h-screen relative overflow-hidden bg-dark-950">
+      <SEO 
+        title="FAQ & Knowledge Base" 
+        description="Find answers to common questions about Stuccord's digital engineering, SaaS development, and partnership process." 
+      />
       {/* SEO Structured Data */}
       <script 
         type="application/ld+json" 
