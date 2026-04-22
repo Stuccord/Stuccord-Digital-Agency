@@ -30,29 +30,35 @@ const FAQPage = () => {
   const [active, setActive] = useState(null);
 
   // SEO Schema for Google "People Also Ask"
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(item => ({
-      "@type": "Question",
-      "name": item.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.a
-      }
-    }))
-  };
+  React.useEffect(() => {
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(item => ({
+        "@type": "Question",
+        "name": item.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.a
+        }
+      }))
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.innerHTML = JSON.stringify(faqSchema);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
 
   return (
     <div className="pt-24 min-h-screen relative overflow-hidden bg-dark-950">
       <SEO 
         title="FAQ & Knowledge Base" 
         description="Find answers to common questions about Stuccord's digital engineering, SaaS development, and partnership process." 
-      />
-      {/* SEO Structured Data */}
-      <script 
-        type="application/ld+json" 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
       />
 
       {/* Cinematic Backgrounds */}
