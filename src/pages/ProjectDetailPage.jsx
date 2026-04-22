@@ -4,35 +4,55 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, ExternalLink, Shield, Zap, Target, CheckCircle } from 'lucide-react';
 
 const projects = {
-  'saas-automation': {
-    title: 'FlowState CRM Architecture',
-    desc: 'An enterprise-grade automation engine designed to eliminate manual data entry for real estate conglomerates.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000',
+  'finscale-pro': {
+    title: 'FinScale Pro Strategy',
+    desc: 'An enterprise-grade financial modeling platform built for accuracy and high-concurrency.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000',
     category: 'SaaS Engineering',
-    liveUrl: 'https://flowstate-crm.demo',
+    liveUrl: '#',
     metrics: ['85% Reduction in Ops Time', '2M+ Monthly API Calls', '99.9% Uptime SLA'],
     challenge: 'Scaling a legacy monolithic architecture to handle 500k+ concurrent transactions without latency spikes.',
-    solution: 'Migrated to a serverless microservices architecture with a global edge-caching layer and real-time WebSocket notifications.'
+    solution: 'Migrated to a serverless microservices architecture with a global edge-caching layer.'
   },
-  'ecommerce-luxury': {
-    title: 'Ethereal Watch Co.',
-    desc: 'A high-conversion headless e-commerce experience for a luxury watchmaker focusing on the Middle Eastern market.',
-    image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=2000',
-    category: 'UI/UX Design',
-    liveUrl: 'https://ethereal-watches.demo',
-    metrics: ['340% Increase in Mobile Conversions', '$12M Annual Recurring Revenue', '1.2s Average Load Time'],
+  'apex-market': {
+    title: 'Apex Market Ecosystem',
+    desc: 'High-conversion e-commerce ecosystem designed for rapid scaling and global reach.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000',
+    category: 'E-commerce',
+    liveUrl: '#',
+    metrics: ['340% Increase in Conversions', '$12M ARR Growth', '1.2s Average Load Time'],
     challenge: 'Re-imagining a physical luxury experience for a digital-first audience while maintaining brand exclusivity.',
-    solution: 'Utilized Next.js for sub-second page transitions and localized currency/language routing to optimize regional friction.'
+    solution: 'Utilized Next.js for sub-second page transitions and localized currency routing.'
   },
-  'fintech-platform': {
-    title: 'NovaPay Global Ledger',
-    desc: 'Cross-border payment infrastructure enabling instant settlements across 40+ countries with sub-millisecond precision.',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2000',
-    category: 'Fintech Solutions',
-    liveUrl: 'https://novapay-global.demo',
-    metrics: ['0.001% Transaction Error Rate', '$500M+ Processed Daily', 'PCI-DSS Level 1 Compliant'],
+  'nova-global': {
+    title: 'Nova Global Identity',
+    desc: 'Complete brand identity overhaul for an international AI research laboratory.',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000',
+    category: 'Brand Strategy',
+    liveUrl: '#',
+    metrics: ['Industry Leading UX Score', '40 Countries Reached', 'PCI-DSS Compliance'],
     challenge: 'Building a trust-less ledger system that complies with diverse regional fin-reg policies simultaneously.',
-    solution: 'Implemented a distributed ledger with automated compliance auditing and an AI-driven fraud detection engine.'
+    solution: 'Implemented a distributed ledger with automated compliance auditing.'
+  },
+  'luxe-real-estate': {
+    title: 'Luxe Real Estate Portal',
+    desc: 'Immersive premium real estate listing portal with VR integration capabilities.',
+    image: 'https://images.unsplash.com/photo-1454165833767-139366d2f347?auto=format&fit=crop&q=80&w=2000',
+    category: 'Web Design',
+    liveUrl: '#',
+    metrics: ['95% User Engagement Rate', 'VR Tours Integrated', 'Mobile First Design'],
+    challenge: 'Creating a seamless VR experience on mobile web browsers for luxury properties.',
+    solution: 'Developed a WebGL-based viewer with optimized assets for rapid loading.'
+  },
+  'orbit-design': {
+    title: 'Orbit Design System',
+    desc: 'Space-tech landing system and visual branding for a satellite launch startup.',
+    image: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=2000',
+    category: 'Brand Identity',
+    liveUrl: '#',
+    metrics: ['100% Brand Recognition', 'Venture Capital Ready', 'Modular Component Library'],
+    challenge: 'Designing a visual language that communicates precision, orbit, and reliability.',
+    solution: 'Created a mathematical grid system based on planetary orbits for all design elements.'
   }
 };
 

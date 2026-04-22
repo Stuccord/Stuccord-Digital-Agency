@@ -43,13 +43,15 @@ const Footer = () => {
 
           <div>
             <h4 className="text-white font-bold mb-6">Company</h4>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-sm">
               {[
-                { name: 'About', path: '/about' },
+                { name: 'About Us', path: '/about' },
                 { name: 'Services', path: '/services' },
                 { name: 'Portfolio', path: '/portfolio' },
                 { name: 'FAQs', path: '/faqs' },
                 { name: 'Careers', path: '/careers' },
+                { name: 'Schedule Call', path: '/schedule' },
+                { name: 'Brand Assets', path: '/brand-assets' },
                 { name: 'Contact', path: '/contact' }
               ].map(link => (
                 <li key={link.name}>
@@ -62,13 +64,18 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Legal</h4>
-            <ul className="space-y-4">
-              {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(link => (
-                <li key={link}>
-                  <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors">
-                    {link}
-                  </a>
+            <h4 className="text-white font-bold mb-6">Support</h4>
+            <ul className="space-y-4 text-sm">
+              {[
+                { name: 'Privacy Policy', path: '#' },
+                { name: 'Terms of Service', path: '#' },
+                { name: 'Cookie Policy', path: '#' },
+                { name: 'Sitemap & Direct Links', path: '/sitemap' }
+              ].map(link => (
+                <li key={link.name}>
+                  <Link to={link.path} className="text-neutral-400 hover:text-primary-400 transition-colors">
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

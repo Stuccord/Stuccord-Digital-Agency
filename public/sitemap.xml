@@ -2,32 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stuccord.com/</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2024-04-22</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://stuccord.com/about</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://stuccord.com/services</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2024-04-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://stuccord.com/portfolio</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2024-04-22</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://stuccord.com/about</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://stuccord.com/faqs</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stuccord.com/careers</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://stuccord.com/schedule</loc>
+    <lastmod>2024-04-22</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://stuccord.com/contact</loc>
-    <lastmod>2026-04-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://stuccord.com/brand-assets</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <!-- Portfolio Projects -->
+  <url>
+    <loc>https://stuccord.com/portfolio/finscale-pro</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stuccord.com/portfolio/apex-market</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stuccord.com/portfolio/nova-global</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stuccord.com/portfolio/luxe-real-estate</loc>
+    <lastmod>2024-04-22</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://stuccord.com/portfolio/orbit-design</loc>
+    <lastmod>2024-04-22</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
