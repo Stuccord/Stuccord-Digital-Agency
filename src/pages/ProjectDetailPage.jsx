@@ -5,55 +5,55 @@ import { ArrowLeft, ExternalLink, Shield, Zap, Target, CheckCircle } from 'lucid
 import SEO from '../components/SEO';
 
 const projects = {
-  'finscale-pro': {
-    title: 'FinScale Pro Strategy',
-    desc: 'An enterprise-grade financial modeling platform built for accuracy and high-concurrency.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000',
-    category: 'SaaS Engineering',
-    liveUrl: '#',
-    metrics: ['85% Reduction in Ops Time', '2M+ Monthly API Calls', '99.9% Uptime SLA'],
-    challenge: 'Scaling a legacy monolithic architecture to handle 500k+ concurrent transactions without latency spikes.',
-    solution: 'Migrated to a serverless microservices architecture with a global edge-caching layer.'
+  'bearguard': {
+    title: 'BearGuard Referral Ecosystem',
+    desc: 'A specialized support and referral platform designed for community leaders and medical professionals to manage accident victim assistance and commissions.',
+    image: '/bearguard-shot.png',
+    category: 'Support Services',
+    liveUrl: 'https://bearguard-project-new.vercel.app',
+    metrics: ['Secure Commission Tracking', 'Real-time Referrals', 'Community Impact'],
+    challenge: 'Building a transparent and secure referral system that simplifies commission payouts for community supporters.',
+    solution: 'Developed an automated tracking engine with a high-conversion referral dashboard and secure payout integration.'
   },
-  'apex-market': {
-    title: 'Apex Market Ecosystem',
-    desc: 'High-conversion e-commerce ecosystem designed for rapid scaling and global reach.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2000',
-    category: 'E-commerce',
-    liveUrl: '#',
-    metrics: ['340% Increase in Conversions', '$12M ARR Growth', '1.2s Average Load Time'],
-    challenge: 'Re-imagining a physical luxury experience for a digital-first audience while maintaining brand exclusivity.',
-    solution: 'Utilized Next.js for sub-second page transitions and localized currency routing.'
+  'unipast-new': {
+    title: 'UniPast Platform',
+    desc: 'A futuristic, dark-mode EdTech platform featuring a cinematic login experience and secure access to Ghana\'s largest academic past question database.',
+    image: '/unipast-shot.png',
+    category: 'EdTech',
+    liveUrl: 'https://stuccord.github.io/unipast_new',
+    metrics: ['Secure Authentication', 'Vast Question Library', 'Premium UX Design'],
+    challenge: 'Creating a fast, secure, and visually memorable platform that makes accessing academic resources feel premium and effortless.',
+    solution: 'Built a sci-fi-inspired glassmorphic UI with secure JWT authentication and an optimized content delivery system.'
   },
-  'nova-global': {
-    title: 'Nova Global Identity',
-    desc: 'Complete brand identity overhaul for an international AI research laboratory.',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2000',
-    category: 'Brand Strategy',
-    liveUrl: '#',
-    metrics: ['Industry Leading UX Score', '40 Countries Reached', 'PCI-DSS Compliance'],
-    challenge: 'Building a trust-less ledger system that complies with diverse regional fin-reg policies simultaneously.',
-    solution: 'Implemented a distributed ledger with automated compliance auditing.'
+  'unipast-admin': {
+    title: 'UniPast Control Center',
+    desc: 'A glassmorphic administrative suite designed for total platform governance and real-time data visualization.',
+    image: '/unipast-admin-shot.png',
+    category: 'SaaS Admin',
+    liveUrl: 'https://unipast-admin1-oeurpucko-stuccords-projects.vercel.app/',
+    metrics: ['Real-time Analytics', 'Secure User Management', 'Automated Reporting'],
+    challenge: 'Providing administrators with deep insights into user behavior while maintaining a clean, non-overwhelming interface.',
+    solution: 'Designed a modular dashboard with customizable widgets and high-fidelity data visualizations.'
   },
-  'luxe-real-estate': {
-    title: 'Luxe Real Estate Portal',
-    desc: 'Immersive premium real estate listing portal with VR integration capabilities.',
-    image: 'https://images.unsplash.com/photo-1454165833767-139366d2f347?auto=format&fit=crop&q=80&w=2000',
-    category: 'Web Design',
-    liveUrl: '#',
-    metrics: ['95% User Engagement Rate', 'VR Tours Integrated', 'Mobile First Design'],
-    challenge: 'Creating a seamless VR experience on mobile web browsers for luxury properties.',
-    solution: 'Developed a WebGL-based viewer with optimized assets for rapid loading.'
+  'rich-dream-consult': {
+    title: 'Rich Dream Consult',
+    desc: "Ghana's premier multi-award winning consultancy delivering excellence across Travel & Visa Services, Information Technology, and Business Strategy.",
+    image: '/rich-dream-shot.png',
+    category: 'Consultancy',
+    liveUrl: 'https://stuccord.github.io/Rich-Dream-Consult-Website/',
+    metrics: ['Multi-Award Winner', 'Est. 2020', 'Travel, IT & Strategy'],
+    challenge: 'Building an authoritative digital presence that reflects a multi-disciplinary consultancy trusted by clients across multiple industries.',
+    solution: 'Crafted a bold, cinematic website with gold accents, full-screen hero, and a clear service architecture that drives enquiries.'
   },
-  'orbit-design': {
-    title: 'Orbit Design System',
-    desc: 'Space-tech landing system and visual branding for a satellite launch startup.',
-    image: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=2000',
-    category: 'Brand Identity',
-    liveUrl: '#',
-    metrics: ['100% Brand Recognition', 'Venture Capital Ready', 'Modular Component Library'],
-    challenge: 'Designing a visual language that communicates precision, orbit, and reliability.',
-    solution: 'Created a mathematical grid system based on planetary orbits for all design elements.'
+  'yaa': {
+    title: 'YAA Initiative Platform',
+    desc: 'Empowering the next generation through a dynamic, community-driven platform for youth advancement and engagement.',
+    image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=2000',
+    category: 'NGO / Community',
+    liveUrl: 'https://yaa-7ptf8t3d9-stuccords-projects.vercel.app/',
+    metrics: ['Community Driven', 'High Engagement', 'Impact Focused'],
+    challenge: 'Creating an inclusive digital space that encourages participation and effectively communicates the mission of the association.',
+    solution: 'Developed an interactive community hub with integrated social features and a vibrant, energetic visual identity.'
   }
 };
 

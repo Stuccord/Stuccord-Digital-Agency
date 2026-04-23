@@ -6,52 +6,44 @@ import SEO from '../components/SEO';
 
 const portfolioItems = [
   {
-    id: 'finscale-pro',
-    title: 'FinScale Pro',
+    id: 'bearguard',
+    title: 'BearGuard Support',
     category: 'SaaS',
-    desc: 'An enterprise-grade financial modeling platform built for accuracy and high-concurrency.',
-    meta: 'Fintech Transformation',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800'
+    desc: 'High-impact referral and commission platform for community-based support services.',
+    meta: 'Referral Ecosystem',
+    image: '/bearguard-shot.png'
   },
   {
-    id: 'apex-market',
-    title: 'Apex Market',
+    id: 'unipast-new',
+    title: 'UniPast Platform',
     category: 'Web',
-    desc: 'High-conversion e-commerce ecosystem designed for rapid scaling and global reach.',
-    meta: 'E-commerce Mastery',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800'
+    desc: 'Futuristic, dark-mode EdTech platform with cinematic UI and secure academic resource access.',
+    meta: 'EdTech Innovation',
+    image: '/unipast-shot.png'
   },
   {
-    id: 'nova-global',
-    title: 'Nova Global',
-    category: 'Brand',
-    desc: 'Complete brand identity overhaul for an international AI research laboratory.',
-    meta: 'Minimalist Branding',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800'
-  },
-  {
-    id: 'finscale-pro', // Using same for now
-    title: 'Crypta Vault',
+    id: 'unipast-admin',
+    title: 'UniPast Control',
     category: 'SaaS',
-    desc: 'Multi-layer encrypted storage solution with instant retrieval architecture.',
-    meta: 'Privacy Redefined',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800'
+    desc: 'Advanced governance dashboard with real-time analytics and user management systems.',
+    meta: 'SaaS Governance',
+    image: '/unipast-admin-shot.png'
   },
   {
-    id: 'luxe-real-estate',
-    title: 'Luxe Real Estate',
+    id: 'rich-dream-consult',
+    title: 'Rich Dream',
     category: 'Web',
-    desc: 'Immersive premium real estate listing portal with VR integration capabilities.',
-    meta: 'Digital Presence',
-    image: 'https://images.unsplash.com/photo-1454165833767-139366d2f347?auto=format&fit=crop&q=80&w=800'
+    desc: "Ghana's premier multi-award winning consultancy for Travel, Visa, IT & Business Strategy.",
+    meta: 'Consultancy Excellence',
+    image: '/rich-dream-shot.png'
   },
   {
-    id: 'orbit-design',
-    title: 'Orbit Design',
+    id: 'yaa',
+    title: 'YAA Initiative',
     category: 'Brand',
-    desc: 'Space-tech landing system and visual branding for a satellite launch startup.',
-    meta: 'Futuristic Identity',
-    image: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=800'
+    desc: 'Dynamic community platform empowering youth advancement and engagement globally.',
+    meta: 'Community Growth',
+    image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800'
   }
 ];
 

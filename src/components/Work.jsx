@@ -5,25 +5,25 @@ import { Link } from 'react-router-dom';
 
 const projects = [
   {
-    id: 'finscale-pro',
-    title: 'FinScale Platform',
-    category: 'SaaS Development',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800',
-    stats: 'Reduced load times by 2.4s'
+    id: 'bearguard',
+    title: 'BearGuard Support',
+    category: 'Support Services',
+    image: '/bearguard-shot.png',
+    stats: 'Community Referral Ecosystem'
   },
   {
-    id: 'apex-market',
-    title: 'Apex E-commerce',
-    category: 'Web Design',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800',
-    stats: '130% increase in conversions'
+    id: 'unipast-new',
+    title: 'UniPast Platform',
+    category: 'EdTech & Web',
+    image: '/unipast-shot.png',
+    stats: '200k+ Active Students'
   },
   {
-    id: 'nova-global',
-    title: 'Nova AI Suite',
-    category: 'Brand Identity',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
-    stats: 'Industry leading UX/UI'
+    id: 'rich-dream-consult',
+    title: 'Rich Dream Consult',
+    category: 'Consultancy Web',
+    image: '/rich-dream-shot.png',
+    stats: 'Multi-Award Winner'
   }
 ];
 
