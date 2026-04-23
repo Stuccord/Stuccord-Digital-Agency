@@ -21,11 +21,11 @@ const Footer = () => {
             <div className="space-y-3 mb-8 text-sm text-neutral-400">
                 <p className="flex items-center gap-2 hover:text-primary-400 transition-colors cursor-pointer">
                   <span className="w-4 h-4 bg-primary-500/20 rounded flex items-center justify-center text-primary-400 text-[10px]">📞</span>
-                  (+233) 054-758-1168
+                  (+233) 054-530-6677
                 </p>
                <p className="flex items-center gap-2 hover:text-primary-400 transition-colors cursor-pointer">
                  <span className="w-4 h-4 bg-primary-500/20 rounded flex items-center justify-center text-primary-400 text-[10px]">✉️</span>
-                 contact@stuccord.com
+                 stuccord14@gmail.com
                </p>
             </div>
             <div className="flex gap-4">

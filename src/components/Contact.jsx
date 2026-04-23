@@ -69,9 +69,9 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-primary-400 group-hover:bg-primary-500 group-hover:text-white transition-all">
                 <Mail className="w-6 h-6" />
               </div>
-              <a href="mailto:contact@stuccord.com" className="block">
+              <a href="mailto:stuccord14@gmail.com" className="block">
                 <p className="text-neutral-500 text-sm font-medium">Email us at</p>
-                <p className="text-white text-lg font-bold">contact@stuccord.com</p>
+                <p className="text-white text-lg font-bold">stuccord14@gmail.com</p>
               </a>
             </div>
 
@@ -79,9 +79,9 @@ const Contact = () => {
               <div className="w-12 h-12 rounded-2xl glass flex items-center justify-center text-primary-400 group-hover:bg-primary-500 group-hover:text-white transition-all">
                 <Phone className="w-6 h-6" />
               </div>
-              <a href="tel:+233547581168" className="block">
-                <p className="text-neutral-500 text-sm font-medium">Call/WhatsApp</p>
-                <p className="text-white text-lg font-bold">(+233) 054-758-1168</p>
+              <a href="tel:+233545306677" className="block">
+                <p className="text-neutral-500 text-sm font-medium">Call us</p>
+                <p className="text-white text-lg font-bold">(+233) 054-530-6677</p>
               </a>
             </div>
 
@@ -126,7 +126,7 @@ const Contact = () => {
           ) : (
             <form 
               onSubmit={handleSubmit}
-              action="https://formspree.io/f/stuccord14@gmail.com" // Implementation hint
+              action="https://formspree.io/f/stuccord14@gmail.com"
               method="POST" 
               className="space-y-6"
             >
