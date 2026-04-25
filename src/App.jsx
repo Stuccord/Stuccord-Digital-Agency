@@ -26,6 +26,7 @@ import UXDesign from './pages/services/UXDesign';
 import Maintenance from './pages/services/Maintenance';
 import BlogPage from './pages/BlogPage';
 import BlogPostPage from './pages/BlogPostPage';
+import PricingPage from './pages/PricingPage';
 
 // Scroll to top on page change
 const ScrollToTop = () => {
@@ -62,6 +63,7 @@ function App() {
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogPostPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
           
           {/* Service Subpages */}
           <Route path="/services/web-design" element={<WebDesign />} />

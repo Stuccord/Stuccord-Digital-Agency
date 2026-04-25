@@ -9,6 +9,7 @@ import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
 import SEO from '../components/SEO';
+import Pricing from '../components/Pricing';
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <Work />
       <About />
       <Process />
+      <Pricing />
       <Testimonials />
       <CTA />
     </>
