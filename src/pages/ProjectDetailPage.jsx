@@ -82,6 +82,13 @@ const projects = {
   }
 };
 
+const stableId = (key) => {
+  if (!key) return '01';
+  const chars = key.split('');
+  const sum = chars.reduce((acc, c) => acc + c.charCodeAt(0), 0);
+  return String((sum % 9) + 1).padStart(2, '0');
+};
+
 const ProjectDetailPage = () => {
   const { id } = useParams();
   const project = projects[id];
@@ -144,13 +151,13 @@ const ProjectDetailPage = () => {
             <div className="max-w-6xl">
               <div className="flex items-center gap-4 mb-8">
                  <div className="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></div>
-                 <span className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400">{project.category} // SYSTEM_ID: 0{Math.floor(Math.random() * 9)}</span>
+                 <span className="text-xs font-black uppercase tracking-[0.4em] text-neutral-400">{project.category} // SYSTEM_ID: {stableId(id)}</span>
               </div>
               
-              <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black uppercase tracking-tighter leading-[0.8] mb-16 italic">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black uppercase tracking-tighter leading-[0.85] mb-16 italic overflow-hidden">
                 {project.title.split(' ').map((word, i) => (
-                  <span key={i} className={i === 0 ? "text-white block" : "text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600 block lg:inline-block"}>
-                    {word}{' '}
+                  <span key={i} className={`block ${i === 0 ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600'}`}>
+                    {word}
                   </span>
                 ))}
               </h1>

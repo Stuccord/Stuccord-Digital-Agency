@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Zap, Shield, Target } from 'lucide-react';
+import { ArrowRight, Globe, Zap, Shield, Target, Code2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const capabilities = [

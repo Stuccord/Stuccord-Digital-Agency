@@ -182,7 +182,7 @@ const AIChat = () => {
                     </button>
                   </form>
                   <a 
-                    href={`https://wa.me/233547581168?text=Hi, I'm reaching out from Stuccord AI. I have a question about...`}
+                    href={`https://wa.me/233545306677?text=Hi, I'm reaching out from Stuccord AI. I have a question about...`}
                     target="_blank"
                     className="w-full py-2.5 border border-white/10 text-white font-bold rounded-lg hover:bg-white/5 transition-all flex items-center justify-center gap-2 text-xs"
                   >

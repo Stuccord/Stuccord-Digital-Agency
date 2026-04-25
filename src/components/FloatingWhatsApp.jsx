@@ -2,7 +2,7 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const WA_NUMBER = '233547581168';
+const WA_NUMBER = '233545306677';
 const WA_MESSAGE = encodeURIComponent("Hello Stuccord! I'd like to discuss a project.");
 
 const FloatingWhatsApp = () => {
