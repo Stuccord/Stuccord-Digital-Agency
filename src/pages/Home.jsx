@@ -15,7 +15,6 @@ import SystemDiagnostics from '../components/SystemDiagnostics';
 import SEO from '../components/SEO';
 
 const Home = () => {
-  console.log('--- HOME COMPONENT RENDERING ---');
   return (
     <>
       <SEO 
