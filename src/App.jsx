@@ -38,6 +38,7 @@ const ScrollToTop = () => {
 };
 
 function App() {
+  console.log('--- APP COMPONENT MOUNTING ---');
   return (
     <Router>
       <ScrollToTop />

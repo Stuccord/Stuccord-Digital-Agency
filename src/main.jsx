@@ -1,11 +1,8 @@
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
 
-console.log('--- MAIN SCRIPT EXECUTING ---');
-
-const root = document.getElementById('root');
-if (root) {
-  console.log('--- ROOT ELEMENT FOUND, RENDERING ---');
-  createRoot(root).render(<h1 style={{ color: 'white', padding: '50px' }}>HELLO FROM MAIN</h1>);
-} else {
-  console.error('--- ROOT NOT FOUND ---');
-}
+createRoot(document.getElementById('root')).render(
+  <App />
+)
