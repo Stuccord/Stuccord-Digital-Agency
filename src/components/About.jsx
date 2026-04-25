@@ -14,10 +14,10 @@ const About = () => {
         >
           <div className="mb-16 lg:mb-24">
             <h2 className="text-4xl md:text-7xl lg:text-9xl font-black text-dark-950 uppercase tracking-tighter leading-[0.85] mb-4">
-              Agencies design <br/> for designers.
+              Most agencies <br/> build for looks.
             </h2>
             <h2 className="text-4xl md:text-7xl lg:text-9xl font-black text-white mix-blend-difference uppercase tracking-tighter leading-[0.85]">
-              We engineer <br/> for revenue.
+              Stuccord builds <br/> for growth.
             </h2>
           </div>
           

@@ -60,10 +60,10 @@ ${formData.get('message')}
            transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
-            Let's Build Something <span className="text-gradient-primary">Great Together.</span>
+            Let's Fix Your Website and <span className="text-gradient-primary">Grow Your Business.</span>
           </h2>
           <p className="text-neutral-400 text-lg mb-12">
-            Ready to take your digital presence to the next level? Our team is waiting to partner with you. All inquiries are supervised by our executive team.
+            Whether you run a clinic, a shop, or an established business, we are here to turn your digital presence into a sales machine. Our team partners with you to increase trust and conversions.
           </p>
 
           <div className="space-y-8">
@@ -158,10 +158,10 @@ ${formData.get('message')}
               <div className="space-y-2">
                 <label className="text-sm font-medium text-neutral-400 ml-1">Service Required</label>
                 <select name="service" className="w-full bg-dark-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary-500 transition-colors appearance-none">
-                  <option>SaaS Development</option>
-                  <option>Web Design</option>
+                  <option>Site Fixes & Maintenance</option>
+                  <option>Custom Web Design</option>
+                  <option>Conversion Optimization</option>
                   <option>Brand Identity</option>
-                  <option>SEO & Marketing</option>
                 </select>
               </div>
 

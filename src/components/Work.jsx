@@ -5,6 +5,13 @@ import { Link } from 'react-router-dom';
 
 const projects = [
   {
+    id: 'zoe-dental',
+    title: 'Zoe Dental',
+    category: 'Web Engineering',
+    image: '/web_design_showcase.png',
+    metric: '+310% Leads'
+  },
+  {
     id: 'bearguard',
     title: 'BearGuard',
     category: 'SaaS Architecture',
@@ -24,13 +31,6 @@ const projects = [
     category: 'Luxury Identity',
     image: '/rich-dream-shot.png',
     metric: 'Elite Trust'
-  },
-  {
-    id: 'ecommerce-luxury',
-    title: 'Aura Luxe',
-    category: 'E-commerce',
-    image: '/ecommerce_luxury_ui.png',
-    metric: '$1.2M Rev'
   }
 ];
 
@@ -96,8 +96,8 @@ const Work = () => {
                </div>
             </div>
             <h2 className="text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.8] italic">
-              Work That <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600">Drives Revenue.</span>
+              Building Products. <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600">Generating Growth.</span>
             </h2>
           </div>
 

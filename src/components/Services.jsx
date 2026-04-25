@@ -6,31 +6,31 @@ import { Link } from 'react-router-dom';
 const capabilities = [
   {
     id: '01',
-    title: 'SaaS Systems',
-    icon: <Zap className="w-6 h-6" />,
-    desc: 'Scalable, sub-second architectures engineered for global startups.',
+    title: 'Custom Web',
+    icon: <Code2 className="w-6 h-6" />,
+    desc: 'Fast and professional websites that look great on any screen. Built to help you get more customers.',
     path: '/services/web-development'
   },
   {
     id: '02',
-    title: 'Experiences',
-    icon: <Globe className="w-6 h-6" />,
-    desc: 'Cinematic, high-conversion web experiences that command attention.',
-    path: '/services/web-design'
+    title: 'Custom Apps',
+    icon: <Zap className="w-6 h-6" />,
+    desc: 'Smart tools and apps that solve business problems and make your work much easier.',
+    path: '/services/web-development'
   },
   {
     id: '03',
-    title: 'Brand ID',
-    icon: <Shield className="w-6 h-6" />,
-    desc: 'Elite visual positioning for high-ticket market dominance.',
-    path: '/services/ux-design'
+    title: 'Great Design',
+    icon: <Globe className="w-6 h-6" />,
+    desc: 'Beautiful and unique designs that help your brand stand out and build trust with customers.',
+    path: '/services/web-design'
   },
   {
     id: '04',
-    title: 'Growth Eng',
-    icon: <Target className="w-6 h-6" />,
-    desc: 'Data-backed technical strategies to scale valuations.',
-    path: '/investment'
+    title: 'Growth Tools',
+    icon: <Shield className="w-6 h-6" />,
+    desc: 'Use everything your business needs to grow online and succeed with confidence.',
+    path: '/onboarding'
   }
 ];
 
@@ -97,12 +97,12 @@ const Services = () => {
                </div>
             </div>
             <h3 className="text-5xl lg:text-7xl font-black text-white uppercase tracking-tighter leading-[0.8] italic">
-              Digital <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600">Architectures.</span>
+              High-Performance <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-200 to-neutral-600">Results.</span>
             </h3>
           </div>
           <div className="lg:pb-4">
              <p className="text-neutral-500 font-medium max-w-sm text-sm lg:text-right">
-                We engineer high-performance digital ecosystems that command markets and scale valuations.
+                Fast websites and helpful tools made to help ambitious businesses succeed.
              </p>
           </div>
         </div>

@@ -26,7 +26,7 @@ const Hero = () => {
         <img 
           src="/hero_cinematic_bg.png" 
           alt="Stuccord Agency Digital Architecture" 
-          className="w-full h-full object-cover filter brightness-[0.6] grayscale-[0.1] transition-all duration-1000"
+          className="w-full h-full object-cover filter brightness-[0.25] grayscale-[0.2] transition-all duration-1000"
         />
         <div className="absolute inset-0 z-20 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
       </motion.div>
@@ -53,32 +53,40 @@ const Hero = () => {
             <span className="text-[8px] lg:text-[10px] font-black text-primary-400 uppercase tracking-[0.3em]">System Active // Q3 2026 Availability</span>
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-8 lg:mb-12 italic">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-8 lg:mb-12 italic">
             <motion.span 
-              initial={{ x: -50, opacity: 0 }}
+              initial={{ x: -30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
               className="block text-white"
             >
-              Engineer
+              Websites Built
             </motion.span>
             <motion.span 
-              initial={{ x: 50, opacity: 0 }}
+              initial={{ x: 30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.4 }}
-              className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-emerald-600"
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-emerald-500"
             >
-              Dominance.
+              To Perform.
+            </motion.span>
+            <motion.span 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+              className="block text-neutral-500 text-3xl md:text-5xl mt-2 font-black italic"
+            >
+              For High-Growth Brands.
             </motion.span>
           </h1>
 
           <motion.p 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            className="text-lg md:text-xl lg:text-2xl text-neutral-400 max-w-3xl mx-auto mb-12 lg:mb-16 font-medium leading-tight relative z-50 px-4"
+            transition={{ duration: 1, delay: 0.7 }}
+            className="text-lg md:text-xl lg:text-2xl text-neutral-400 max-w-4xl mx-auto mb-12 lg:mb-16 font-medium leading-tight relative z-50 px-4"
           >
-            We don't build websites. We architect high-performance digital ecosystems that command markets and scale valuations.
+            Fast, beautiful designs made to grow your business. High-quality digital products that turn visitors into loyal customers.
           </motion.p>
 
           <motion.div
@@ -89,20 +97,21 @@ const Hero = () => {
           >
             <Link 
               to="/onboarding" 
-              className="group relative inline-flex items-center gap-4 px-10 py-5 lg:px-14 lg:py-6 bg-white text-dark-950 font-black uppercase tracking-[0.2em] text-xs lg:text-sm overflow-hidden hover:scale-105 active:scale-95 transition-all duration-500 w-full sm:w-auto justify-center shadow-[0_20px_50px_rgba(255,255,255,0.1)]"
+              className="group relative inline-flex items-center gap-4 px-10 py-5 lg:px-14 lg:py-6 bg-primary-500 text-white font-black uppercase tracking-[0.2em] text-xs lg:text-sm overflow-hidden hover:scale-105 active:scale-95 transition-all duration-500 w-full sm:w-auto justify-center shadow-[0_20px_50px_rgba(31,239,147,0.1)] rounded-2xl"
             >
-              <span className="relative z-10">Start Project</span>
+              <span className="relative z-10">Start My Project</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform relative z-10" />
-              <div className="absolute inset-0 bg-primary-500 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <style>{`.group:hover span { color: #000; } .group:hover svg { color: #000; }`}</style>
             </Link>
 
             <Link 
               to="/schedule" 
-              className="group relative inline-flex items-center gap-4 px-10 py-5 lg:px-14 lg:py-6 bg-transparent border border-white/20 text-white font-black uppercase tracking-[0.2em] text-xs lg:text-sm overflow-hidden hover:border-primary-500 hover:text-dark-950 active:scale-95 transition-all duration-500 w-full sm:w-auto justify-center"
+              className="group relative inline-flex items-center gap-4 px-10 py-5 lg:px-14 lg:py-6 bg-transparent border border-white/10 text-white font-black uppercase tracking-[0.2em] text-xs lg:text-sm overflow-hidden hover:border-primary-500 active:scale-95 transition-all duration-500 w-full sm:w-auto justify-center rounded-2xl"
             >
-              <span className="relative z-10">Schedule Zoom Call</span>
-              <Video className="w-5 h-5 group-hover:scale-110 transition-transform relative z-10" />
-              <div className="absolute inset-0 bg-primary-500 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
+              <span className="relative z-10">Book a Free Call</span>
+              <Video className="w-5 h-5 group-hover:scale-110 transition-transform relative z-10 text-primary-500" />
+              <div className="absolute inset-0 bg-white/5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
             </Link>
             
             <Link 

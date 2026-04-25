@@ -6,6 +6,15 @@ import SEO from '../components/SEO';
 
 const portfolioItems = [
   {
+    id: 'zoe-dental',
+    title: 'Zoe Dental Clinic',
+    desc: 'Complete digital overhaul for a high-traffic dental clinic. We repaired broken site architecture and optimized the booking flow, resulting in a massive increase in lead generation.',
+    image: '/web_design_showcase.png',
+    category: 'Clinic / Growth',
+    tags: ['Site Fix', 'Booking Optimization', 'SEO'],
+    metric: '+310% Leads'
+  },
+  {
     id: 'bearguard',
     title: 'BearGuard',
     desc: 'An elite SaaS referral ecosystem engineered for high-integrity lead tracking and automated reward distribution.',
@@ -24,15 +33,6 @@ const portfolioItems = [
     metric: '50k+ Users'
   },
   {
-    id: 'unipast-admin',
-    title: 'UniPast Control',
-    desc: 'Advanced governance dashboard and administrative engine for the UniPast ecosystem, featuring real-time data visualization.',
-    image: '/unipast-admin-shot.png',
-    category: 'SaaS / Admin',
-    tags: ['React', 'PostgreSQL', 'Charts.js'],
-    metric: '< 100ms Latency'
-  },
-  {
     id: 'rich-dream-consult',
     title: 'Rich Dream Consult',
     desc: 'Premium digital presence for a world-class travel and business consultancy, bridging global markets with gold-standard aesthetics.',
@@ -40,15 +40,6 @@ const portfolioItems = [
     category: 'Business / Luxury',
     tags: ['Brutalism', 'SEO', 'Conversion'],
     metric: '9.8 Trust Score'
-  },
-  {
-    id: 'yaa',
-    title: 'YAA Initiative',
-    desc: 'A dynamic community platform and digital hub empowering youth advancement through engagement and global networking.',
-    image: '/hero_cinematic_bg.png',
-    category: 'Community / Brand',
-    tags: ['Mobile-First', 'Interaction', 'Design'],
-    metric: '+400% Engagement'
   }
 ];
 

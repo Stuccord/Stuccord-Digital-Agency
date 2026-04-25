@@ -15,9 +15,9 @@ const Trust = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="max-w-sm">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary-500 mb-4">Trusted by Industry Disruptors</h3>
+            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary-500 mb-4">Trusted by Ambitious Brands</h3>
             <p className="text-neutral-400 font-medium text-sm leading-relaxed">
-              We partner with elite founders and technical teams to engineer platforms that handle millions in volume.
+              We partner with businesses, clinics, and shops to engineer digital assets that build trust and scale revenue.
             </p>
           </div>
           
