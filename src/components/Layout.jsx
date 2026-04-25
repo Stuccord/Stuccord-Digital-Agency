@@ -62,13 +62,13 @@ const Layout = ({ children }) => {
         </div>
       </div>
 
-      {!isOnboarding && <Navbar />}
+      {/* {!isOnboarding && <Navbar />} */}
       
       <main className={`relative flex flex-col w-full z-10 ${isOnboarding ? 'min-h-screen' : ''}`}>
         {children}
       </main>
 
-      {!isOnboarding && <Footer />}
+      {/* {!isOnboarding && <Footer />} */}
       {!isOnboarding && <FloatingWhatsApp />}
     </div>
   );
