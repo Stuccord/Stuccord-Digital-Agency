@@ -1,14 +1,16 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Trust from '../components/Trust';
-import About from '../components/About';
-import Services from '../components/Services';
 import Work from '../components/Work';
-import Features from '../components/Features';
-import Process from '../components/Process';
+import Services from '../components/Services';
+import Arsenal from '../components/Arsenal';
+import About from '../components/About';
 import Testimonials from '../components/Testimonials';
-import ContactSection from '../components/Contact'; // Note: Renamed export or usage
+import Process from '../components/Process';
+import IntelFeed from '../components/IntelFeed';
 import CTA from '../components/CTA';
+import Marquee from '../components/Marquee';
+import SystemDiagnostics from '../components/SystemDiagnostics';
 
 import SEO from '../components/SEO';
 
@@ -20,13 +22,17 @@ const Home = () => {
         description="Stuccord engineers elite digital experiences and scale-ready SaaS solutions for industry leaders." 
       />
       <Hero />
+      <SystemDiagnostics />
+      <Marquee text="Digital Engineering • Brand Dominance • Growth Strategy • Elite Design • " />
       <Trust />
-      <About />
-      <Services />
       <Work />
-      <Features />
+      <Arsenal />
+      <Marquee text="Engineered for Revenue • Scaled for Future • Disrupting Markets • " />
+      <Services />
+      <About />
       <Process />
       <Testimonials />
+      <IntelFeed />
       <CTA />
     </>
   );

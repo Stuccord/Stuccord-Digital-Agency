@@ -47,41 +47,68 @@ const SchedulePage = () => {
     setSelectedTime(null);
   };
 
-  const handleBooking = (e) => {
+  const handleBooking = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     const formData = new FormData(e.target);
+    const clientName = formData.get('name') || 'Prospect';
+    const clientEmail = formData.get('email');
+    const clientPhone = formData.get('whatsapp');
+    const notes = formData.get('notes') || 'None provided';
+    const dateStr = `${months[month]} ${selectedDay}, ${year}`;
+    const timeStr = selectedTime;
+
     const data = {
-      from_name: formData.get('name') || 'Prospect',
-      from_email: formData.get('email'),
+      from_name: clientName,
+      from_email: clientEmail,
       subject: 'Strategy Call Request',
       message: `
         STRATEGY CALL BOOKED:
-        Client: ${formData.get('name')}
-        Email: ${formData.get('email')}
+        Client: ${clientName}
+        Email: ${clientEmail}
+        WhatsApp: ${clientPhone || 'Not provided'}
         -----------------------------------
-        DATE: ${months[month]} ${selectedDay}, ${year}
-        TIME: ${selectedTime}
+        DATE: ${dateStr}
+        TIME: ${timeStr}
         -----------------------------------
         OBJECTIVES:
-        ${formData.get('notes') || 'None provided'}
+        ${notes}
       `,
       to_email: EMAIL_CONFIG.RECEIVER_EMAIL,
     };
 
-    emailjs.send(
-      EMAIL_CONFIG.SERVICE_ID,
-      EMAIL_CONFIG.TEMPLATE_ID,
-      data,
-      EMAIL_CONFIG.PUBLIC_KEY
-    ).then(() => {
+    try {
+      // 1. Send Email to Agency
+      await emailjs.send(EMAIL_CONFIG.SERVICE_ID, EMAIL_CONFIG.TEMPLATE_ID, data, EMAIL_CONFIG.PUBLIC_KEY);
+
+      // 2. Send Auto-Reply WhatsApp to Client via Webhook
+      if (clientPhone) {
+        const clientWaMessage = `Hello ${clientName}! We have received your Strategy Call request for ${dateStr} at ${timeStr}. Our team is reviewing the details and will get back to you shortly. - Stuccord Agency`;
+        try {
+          await fetch('https://hooks.zapier.com/hooks/catch/your-webhook-id/auto-reply', {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              action: 'send_whatsapp_autoreply',
+              client_phone: clientPhone,
+              client_name: clientName,
+              message: clientWaMessage
+            })
+          });
+        } catch (waErr) {
+          console.warn("WhatsApp Webhook Failed:", waErr);
+        }
+      }
+
       setIsSubmitting(false);
       setIsBooked(true);
-    }).catch(() => {
+    } catch (error) {
+      console.error(error);
       setIsSubmitting(false);
-      setIsBooked(true);
-    });
+      setIsBooked(true); // Still show booked even if email fails, or handle error properly
+    }
   };
 
   if (isBooked) {
@@ -205,6 +232,10 @@ const SchedulePage = () => {
                             <div className="relative">
                                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
                                <input name="email" type="email" required placeholder="Work Email" className="w-full bg-dark-800 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary-500 shadow-inner" />
+                            </div>
+                            <div className="relative">
+                               <MessageSquare className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-neutral-500" />
+                               <input name="whatsapp" type="tel" required placeholder="WhatsApp Number (Optional)" className="w-full bg-dark-800 border border-white/10 rounded-xl py-4 pl-12 pr-4 text-white focus:outline-none focus:border-primary-500 shadow-inner" />
                             </div>
                             <textarea name="notes" placeholder="Briefly describe your objectives..." className="w-full bg-dark-800 border border-white/10 rounded-xl py-4 px-4 text-white h-32 focus:outline-none focus:border-primary-500 resize-none shadow-inner"></textarea>
                          </div>

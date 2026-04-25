@@ -6,41 +6,47 @@ import { Map, ArrowRight, Home, Briefcase, Info, MessageCircle, FileText, Puzzle
 const SitemapPage = () => {
   const sections = [
     {
-      title: 'Main Navigation',
+      title: 'Navigation',
       icon: <Home className="w-6 h-6 text-primary-400" />,
       links: [
-        { name: 'Home', path: '/', desc: 'Stuccord Agency Landing Page' },
-        { name: 'Services', path: '/services', desc: 'Our Full Stack Digital Solutions' },
-        { name: 'Portfolio', path: '/portfolio', desc: 'Curated Gallery of Excellence' },
-        { name: 'About', path: '/about', desc: 'Our Vision, Mission and Team' },
+        { name: 'Home', path: '/', desc: 'Stuccord Agency HQ' },
+        { name: 'Services', path: '/services', desc: 'Our Technical Capabilities' },
+        { name: 'Portfolio', path: '/portfolio', desc: 'Verified Results & Case Studies' },
+        { name: 'About', path: '/about', desc: 'The Stuccord Philosophy' },
+        { name: 'Testimonials', path: '/testimonials', desc: 'Client Success Stories' },
+      ]
+    },
+    {
+      title: 'Services',
+      icon: <Puzzle className="w-6 h-6 text-primary-400" />,
+      links: [
+        { name: 'Web Design', path: '/services/web-design', desc: 'High-Conversion Interfaces' },
+        { name: 'Web Development', path: '/services/web-development', desc: 'Scalable Software Engineering' },
+        { name: 'E-commerce', path: '/services/ecommerce', desc: 'Revenue-Optimized Stores' },
+        { name: 'UI/UX Design', path: '/services/ux-design', desc: 'Psychology-Driven Experience' },
+        { name: 'Maintenance', path: '/services/maintenance', desc: 'Elite Technical Support' },
       ]
     },
     {
       title: 'Company',
       icon: <Info className="w-6 h-6 text-primary-400" />,
       links: [
-        { name: 'FAQs', path: '/faqs', desc: 'Common Questions & Answers' },
-        { name: 'Careers', path: '/careers', desc: 'Join the Stuccord Engineering Team' },
-        { name: 'Schedule Call', path: '/schedule', desc: 'Book a Strategy Consultation' },
-        { name: 'Contact', path: '/contact', desc: 'Get in Touch with our Experts' },
-      ]
-    },
-    {
-      title: 'Tools & Assets',
-      icon: <Palette className="w-6 h-6 text-primary-400" />,
-      links: [
-        { name: 'Brand Assets', path: '/brand-assets', desc: 'Generate Premium Brand Identities' },
+        { name: 'Our Process', path: '/methodology', desc: 'How We Engineer Success' },
+        { name: 'Investment', path: '/investment', desc: 'Pricing & Partnership Levels' },
+        { name: 'Insights', path: '/insights', desc: 'Technical & Business Wisdom' },
+        { name: 'Careers', path: '/careers', desc: 'Join the Engineering Team' },
+        { name: 'FAQs', path: '/faqs', desc: 'Common Inquiries' },
       ]
     },
     {
       title: 'Case Studies',
       icon: <Briefcase className="w-6 h-6 text-primary-400" />,
       links: [
-        { name: 'FinScale Pro', path: '/portfolio/finscale-pro', desc: 'SaaS Fintech Transformation' },
-        { name: 'Apex Market', path: '/portfolio/apex-market', desc: 'E-commerce Ecosystem' },
-        { name: 'Nova Global', path: '/portfolio/nova-global', desc: 'Minimalist AI Branding' },
-        { name: 'Luxe Real Estate', path: '/portfolio/luxe-real-estate', desc: 'Premium Listing Portal' },
-        { name: 'Orbit Design', path: '/portfolio/orbit-design', desc: 'Space-tech Digital Presence' },
+        { name: 'BearGuard', path: '/portfolio/bearguard', desc: 'SaaS Referral Ecosystem' },
+        { name: 'UniPast Platform', path: '/portfolio/unipast-new', desc: 'Cinematic EdTech Portal' },
+        { name: 'UniPast Control', path: '/portfolio/unipast-admin', desc: 'Admin Governance Dashboard' },
+        { name: 'Rich Dream Consult', path: '/portfolio/rich-dream-consult', desc: 'Premium Consultancy Site' },
+        { name: 'YAA Initiative', path: '/portfolio/yaa', desc: 'Community Hub' },
       ]
     }
   ];

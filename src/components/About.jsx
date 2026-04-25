@@ -1,109 +1,58 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Quote } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <section id="philosophy" className="w-full py-32 container mx-auto px-6 lg:px-8">
-      <div className="grid lg:grid-cols-2 gap-20 items-center">
-        <motion.div
-           initial={{ opacity: 0, x: -30 }}
-           whileInView={{ opacity: 1, x: 0 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.8 }}
-        >
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl lg:text-6xl font-bold text-white mb-8 leading-tight"
-          >
-            We Don't Just Build Websites. <br/>
-            <span className="text-gradient">We Build Businesses.</span>
-          </motion.h2>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-neutral-400 text-lg mb-8 leading-relaxed"
-          >
-            In a crowded digital landscape, blending in is failing. At Stuccord, we combine world-class design, robust engineering, and revenue-focused marketing to create digital touchpoints that dominate.
-          </motion.p>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-neutral-400 text-lg mb-10 leading-relaxed"
-          >
-            We exist to make you the undeniable leader in your space—turning casual visitors into fiercely loyal customers through exceptional digital experiences.
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <Link to="/about" className="group flex items-center gap-2 text-primary-400 font-bold text-lg hover:text-primary-300 transition-colors">
-              Uncover Our Story <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-            </Link>
-          </motion.div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 30 }}
-          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+    <section id="philosophy" className="w-full py-32 lg:py-48 bg-primary-500 selection:bg-dark-950 selection:text-white">
+      <div className="container mx-auto px-6 lg:px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="relative glass-card rounded-[3rem] p-12 lg:p-16 overflow-hidden aspect-square flex flex-col justify-end group shadow-2xl"
+          transition={{ duration: 0.8 }}
+          className="max-w-6xl mx-auto"
         >
-          {/* Real Background Image with Overlay */}
-          <div className="absolute inset-0 z-0">
-             <img 
-               src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=1500" 
-               className="w-full h-full object-cover grayscale opacity-20 group-hover:scale-105 transition-transform duration-1000"
-               alt="Leadership Studio"
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/60 to-transparent"></div>
+          <div className="mb-16 lg:mb-24">
+            <h2 className="text-4xl md:text-7xl lg:text-9xl font-black text-dark-950 uppercase tracking-tighter leading-[0.85] mb-4">
+              Agencies design <br/> for designers.
+            </h2>
+            <h2 className="text-4xl md:text-7xl lg:text-9xl font-black text-white mix-blend-difference uppercase tracking-tighter leading-[0.85]">
+              We engineer <br/> for revenue.
+            </h2>
           </div>
-
-          <div className="relative z-10">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-8 text-dark-950 border-t-2 border-dark-950 pt-12 lg:pt-16">
             <motion.div 
-               initial={{ opacity: 0, scale: 0 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-               viewport={{ once: true }}
-               transition={{ type: "spring", stiffness: 200, delay: 0.6 }}
-               className="w-16 h-16 rounded-full bg-primary-500/20 flex items-center justify-center text-primary-500 mb-8 border border-primary-500/20"
-            >
-              <Quote className="w-8 h-8" fill="currentColor" />
-            </motion.div>
-            <motion.p 
                initial={{ opacity: 0, y: 20 }}
                whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               transition={{ duration: 0.6, delay: 0.7 }}
-               className="text-2xl lg:text-3xl font-medium text-white italic leading-relaxed mb-8"
+               transition={{ delay: 0.2 }}
+               className="flex flex-col gap-4"
             >
-              “The future belongs to brands that treat their digital presence like their most valuable asset.”
-            </motion.p>
+              <span className="text-6xl lg:text-8xl font-black tracking-tighter leading-none">$50M+</span>
+              <span className="text-xs lg:text-sm font-bold uppercase tracking-widest max-w-[200px]">Client Revenue Generated</span>
+            </motion.div>
+            
             <motion.div 
-               initial={{ opacity: 0, x: -20 }}
-               whileInView={{ opacity: 1, x: 0 }}
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
                viewport={{ once: true }}
-               transition={{ duration: 0.6, delay: 0.8 }}
-               className="flex items-center gap-4"
+               transition={{ delay: 0.3 }}
+               className="flex flex-col gap-4 md:pl-8 lg:pl-16 md:border-l-2 border-dark-950"
             >
-              <div className="w-12 h-12 rounded-full bg-primary-600 flex items-center justify-center font-bold text-white shadow-lg shadow-primary-500/20">SL</div>
-              <div>
-                <p className="text-white font-bold">Stuccord Leadership</p>
-                <p className="text-neutral-500 text-sm">Vision & Strategy</p>
-              </div>
+              <span className="text-6xl lg:text-8xl font-black tracking-tighter leading-none">99%</span>
+              <span className="text-xs lg:text-sm font-bold uppercase tracking-widest max-w-[200px]">Partner Retention Rate</span>
+            </motion.div>
+            
+            <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: 0.4 }}
+               className="flex flex-col gap-4 md:pl-8 lg:pl-16 md:border-l-2 border-dark-950"
+            >
+              <span className="text-6xl lg:text-8xl font-black tracking-tighter leading-none">15+</span>
+              <span className="text-xs lg:text-sm font-bold uppercase tracking-widest max-w-[200px]">Global Startups Scaled</span>
             </motion.div>
           </div>
         </motion.div>

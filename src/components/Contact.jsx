@@ -18,13 +18,15 @@ const Contact = () => {
       from_email: formData.get('email'),
       subject: `New Lead: ${formData.get('service')}`,
       message: `
-        CLIENT BRIEF:
-        Name: ${formData.get('name')}
-        Email: ${formData.get('email')}
-        Service: ${formData.get('service')}
-        -----------------------------------
-        MESSAGE:
-        ${formData.get('message')}
+[ DIRECT SUPPORT TRANSMISSION ]
+
+/// SUBJECT IDENTITY
+▪ Name: ${formData.get('name')}
+▪ Comms Link: ${formData.get('email')}
+▪ Service Required: ${formData.get('service')}
+
+/// TRANSMISSION BRIEF
+${formData.get('message')}
       `,
       to_email: EMAIL_CONFIG.RECEIVER_EMAIL,
     };

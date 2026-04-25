@@ -64,11 +64,11 @@ const ServicesPage = () => {
           <span className="px-4 py-1.5 rounded-full glass border border-primary-500/20 text-primary-400 font-bold uppercase tracking-[0.3em] text-[10px] lg:text-xs mb-8 inline-block">
              Engineering Mastery
           </span>
-          <h1 className="text-5xl lg:text-7xl font-black text-white italic leading-[0.85] tracking-tight mb-8">
-            Our Expertise. Your <br />
-            <span className="text-gradient">Competitive Edge.</span>
+          <h1 className="text-5xl lg:text-9xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8">
+            Expertise. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-emerald-500">Competitive Edge.</span>
           </h1>
-          <p className="text-xl text-neutral-400 max-w-3xl mx-auto mb-20 leading-relaxed font-medium">
+          <p className="text-xl md:text-2xl text-neutral-400 max-w-3xl mx-auto mb-20 leading-relaxed font-medium">
             Every service we provide is designed as a modular building block for your business growth. We combine technical rigor with world-class aesthetics.
           </p>
         </motion.div>
@@ -116,7 +116,7 @@ const ServicesPage = () => {
                 </ul>
 
                 <Link 
-                  to="/schedule" 
+                  to="/onboarding" 
                   className="inline-flex items-center gap-2 text-white font-black uppercase text-xs tracking-widest hover:text-primary-400 transition-all group/link"
                 >
                   Initiate Strategy <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1.5 transition-transform" />
@@ -145,8 +145,8 @@ const ServicesPage = () => {
                 We don't just fill seats; we solve problems. Tell us about your technical challenges and let's engineer a solution together.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-8 px-4">
-                 <Link to="/schedule" className="group relative px-10 py-5 bg-primary-500 text-dark-950 font-black rounded-full shadow-[0_20px_40px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all overflow-hidden flex items-center justify-center gap-3">
-                    <span className="relative z-10 uppercase tracking-tight">Book Strategy Session</span>
+                 <Link to="/onboarding" className="group relative px-10 py-5 bg-primary-500 text-dark-950 font-black rounded-sm shadow-[0_20px_40px_rgba(16,185,129,0.3)] hover:scale-105 active:scale-95 transition-all overflow-hidden flex items-center justify-center gap-3">
+                    <span className="relative z-10 uppercase tracking-tight">Apply to Partner</span>
                     <ArrowRight className="w-5 h-5 relative z-10" />
                  </Link>
                  <Link to="/portfolio" className="px-10 py-5 glass border border-white/10 text-white font-black uppercase tracking-tight rounded-full hover:bg-white/5 transition-all flex items-center justify-center">

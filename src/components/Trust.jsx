@@ -1,64 +1,43 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Cpu, Globe, Zap, Shield, Database } from 'lucide-react';
-
-const brands = [
-  { name: 'EQUINOX', icon: <Cpu className="w-5 h-5" /> },
-  { name: 'GLOBALIA', icon: <Globe className="w-5 h-5" /> },
-  { name: 'NEXUS', icon: <Zap className="w-5 h-5" /> },
-  { name: 'FINSTREAM', icon: <Shield className="w-5 h-5" /> },
-  { name: 'ULTRAVOLT', icon: <Database className="w-5 h-5" /> }
-];
-
-const stats = [
-  { label: 'Digital Transformations', value: '150+' },
-  { label: 'Client Retention Rate', value: '98%' },
-  { label: 'Combined Expertise', value: '10+ Yrs' },
-];
 
 const Trust = () => {
+  const logos = [
+    { name: 'BearGuard', url: 'https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&q=80&w=100' },
+    { name: 'UniPast', url: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=100' },
+    { name: 'ApexMarket', url: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=100' },
+    { name: 'NovaGlobal', url: 'https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=100' },
+    { name: 'LuxeRE', url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=100' }
+  ];
+
   return (
-    <section className="w-full border-y border-white/5 bg-dark-800/30 overflow-hidden relative py-16">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-center text-sm font-bold tracking-[0.2em] text-neutral-500 uppercase mb-12">
-          Trusted by Innovative Brands Worldwide
-        </p>
-
-        {/* Brand Logos */}
-        <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-20 mb-20">
-           {brands.map((brand, i) => (
-             <motion.div 
-               key={brand.name} 
-               initial={{ opacity: 0 }}
-               whileInView={{ opacity: 1 }}
-               viewport={{ once: true }}
-               transition={{ delay: i * 0.1 }}
-               className="flex items-center gap-3 grayscale hover:grayscale-0 opacity-40 hover:opacity-100 transition-all duration-500 cursor-default"
-             >
-               <div className="text-primary-500">
-                 {brand.icon}
-               </div>
-               <span className="text-xl font-black tracking-tighter text-white">{brand.name}</span>
-             </motion.div>
-           ))}
-        </div>
-
-        {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-5xl mx-auto">
-          {stats.map((stat, idx) => (
-            <motion.div 
-              key={idx}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
-              className="relative group"
-            >
-              <div className="absolute -inset-4 bg-primary-500/5 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-5xl lg:text-7xl font-black text-gradient-primary mb-2 italic tracking-tighter">{stat.value}</h3>
-              <p className="text-neutral-500 font-bold uppercase tracking-widest text-xs">{stat.label}</p>
-            </motion.div>
-          ))}
+    <section className="py-24 bg-dark-950 border-y border-white/5 relative overflow-hidden">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="max-w-sm">
+            <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-primary-500 mb-4">Trusted by Industry Disruptors</h3>
+            <p className="text-neutral-400 font-medium text-sm leading-relaxed">
+              We partner with elite founders and technical teams to engineer platforms that handle millions in volume.
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-12 lg:gap-24 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-700">
+            {logos.map((logo, idx) => (
+              <motion.div
+                key={logo.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="flex flex-col items-center gap-4 group"
+              >
+                <div className="w-16 h-16 rounded-2xl overflow-hidden border border-white/10 group-hover:border-primary-500/50 transition-colors">
+                  <img src={logo.url} alt={logo.name} className="w-full h-full object-cover" />
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-neutral-600 group-hover:text-white transition-colors">{logo.name}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

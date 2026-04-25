@@ -1,151 +1,192 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, ArrowRight } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink, Filter, Search } from 'lucide-react';
 import SEO from '../components/SEO';
 
 const portfolioItems = [
   {
     id: 'bearguard',
-    title: 'BearGuard Support',
-    category: 'SaaS',
-    desc: 'High-impact referral and commission platform for community-based support services.',
-    meta: 'Referral Ecosystem',
-    image: '/bearguard-shot.png'
+    title: 'BearGuard',
+    desc: 'An elite SaaS referral ecosystem engineered for high-integrity lead tracking and automated reward distribution.',
+    image: '/bearguard-shot.png',
+    category: 'SaaS / Fintech',
+    tags: ['React', 'Node.js', 'Supabase'],
+    metric: '+240% Growth'
   },
   {
     id: 'unipast-new',
     title: 'UniPast Platform',
-    category: 'Web',
-    desc: 'Futuristic, dark-mode EdTech platform with cinematic UI and secure academic resource access.',
-    meta: 'EdTech Innovation',
-    image: '/unipast-shot.png'
+    desc: 'The next evolution of educational management. A cinematic, 3D-inspired portal for seamless academic orchestration.',
+    image: '/unipast-shot.png',
+    category: 'EdTech / Portal',
+    tags: ['Next.js', 'Framer Motion', 'Tailwind'],
+    metric: '50k+ Users'
   },
   {
     id: 'unipast-admin',
     title: 'UniPast Control',
-    category: 'SaaS',
-    desc: 'Advanced governance dashboard with real-time analytics and user management systems.',
-    meta: 'SaaS Governance',
-    image: '/unipast-admin-shot.png'
+    desc: 'Advanced governance dashboard and administrative engine for the UniPast ecosystem, featuring real-time data visualization.',
+    image: '/unipast-admin-shot.png',
+    category: 'SaaS / Admin',
+    tags: ['React', 'PostgreSQL', 'Charts.js'],
+    metric: '< 100ms Latency'
   },
   {
     id: 'rich-dream-consult',
-    title: 'Rich Dream',
-    category: 'Web',
-    desc: "Ghana's premier multi-award winning consultancy for Travel, Visa, IT & Business Strategy.",
-    meta: 'Consultancy Excellence',
-    image: '/rich-dream-shot.png'
+    title: 'Rich Dream Consult',
+    desc: 'Premium digital presence for a world-class travel and business consultancy, bridging global markets with gold-standard aesthetics.',
+    image: '/rich-dream-shot.png',
+    category: 'Business / Luxury',
+    tags: ['Brutalism', 'SEO', 'Conversion'],
+    metric: '9.8 Trust Score'
   },
   {
     id: 'yaa',
     title: 'YAA Initiative',
-    category: 'Brand',
-    desc: 'Dynamic community platform empowering youth advancement and engagement globally.',
-    meta: 'Community Growth',
-    image: 'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&q=80&w=800'
+    desc: 'A dynamic community platform and digital hub empowering youth advancement through engagement and global networking.',
+    image: '/hero_cinematic_bg.png',
+    category: 'Community / Brand',
+    tags: ['Mobile-First', 'Interaction', 'Design'],
+    metric: '+400% Engagement'
   }
 ];
 
 const PortfolioPage = () => {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'SaaS', 'Web', 'Brand'];
+  const categories = ['All', ...new Set(portfolioItems.map(item => item.category.split(' / ')[0]))];
 
   const filteredItems = filter === 'All' 
     ? portfolioItems 
-    : portfolioItems.filter(item => item.category === filter);
+    : portfolioItems.filter(item => item.category.startsWith(filter));
+
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 0.2], ["0%", "20%"]);
 
   return (
-    <div className="pt-24 min-h-screen relative overflow-hidden bg-dark-950">
+    <div className="min-h-screen bg-dark-950 text-white selection:bg-primary-500 selection:text-dark-950">
       <SEO 
-        title="Portfolio & Success Stories" 
-        description="Explore our curated gallery of premium digital products, high-conversion ecosystems, and transformative brand identities." 
+        title="Case Studies & Archive" 
+        description="Explore our archive of high-performance digital ecosystems, SaaS platforms, and revenue-driven brand experiences." 
       />
-      {/* Cinematic Backgrounds */}
-      <div className="absolute inset-0 noise z-0 opacity-20"></div>
-      <div className="absolute top-[20%] left-[-10%] w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-[150px]"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[150px]"></div>
 
-      <section className="relative z-10 py-24 px-6 lg:px-8 max-w-7xl mx-auto text-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }} 
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <span className="px-4 py-1.5 rounded-full glass border border-primary-500/20 text-primary-400 font-bold uppercase tracking-[0.3em] text-[10px] lg:text-xs mb-8 inline-block">
-             Digital Dominance
-          </span>
-          <h1 className="text-5xl lg:text-8xl font-black text-white italic leading-[0.85] tracking-tight mb-8">
-            Defining the <br />
-            <span className="text-gradient">Standard.</span>
-          </h1>
-          <p className="text-xl text-neutral-400 max-w-3xl mx-auto mb-16 leading-relaxed font-medium">
-            Explore our curated gallery of high-performance digital products and premium brand transformations engineering to disrupt the market.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-6 mb-20">
+      {/* Cinematic Hero Header */}
+      <section className="relative h-[60vh] lg:h-[70vh] w-full flex items-center overflow-hidden">
+        <motion.div style={{ y }} className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-dark-950/10 via-dark-950/20 to-dark-950 z-10"></div>
+          <img 
+            src="/web_design_showcase.png" 
+            alt="Agency Archive" 
+            className="w-full h-full object-cover filter brightness-[0.4] grayscale-[0.3]"
+          />
+        </motion.div>
+
+        <div className="container mx-auto px-6 lg:px-12 relative z-20">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.8] mb-8 italic">
+              The <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-emerald-600">Archive.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-neutral-400 max-w-2xl font-medium leading-tight">
+              A curated selection of mission-critical platforms and cinematic brand experiences engineered for dominance.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Filter Section */}
+      <section className="py-12 border-y border-white/5 bg-dark-950 sticky top-[72px] z-30 backdrop-blur-xl">
+        <div className="container mx-auto px-6 lg:px-12 flex flex-wrap items-center justify-between gap-8">
+          <div className="flex gap-4 overflow-x-auto pb-2 lg:pb-0 no-scrollbar">
             {categories.map(cat => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-10 py-4 rounded-full text-xs font-black uppercase tracking-widest transition-all border duration-500 ${
+                className={`px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${
                   filter === cat 
-                  ? 'bg-primary-500 border-primary-500 text-dark-950 shadow-[0_15px_30px_rgba(16,185,129,0.3)]' 
-                  : 'bg-white/5 border-white/10 text-neutral-400 hover:border-white/20 hover:text-white backdrop-blur-md'
+                  ? 'bg-primary-500 text-dark-950' 
+                  : 'bg-white/5 text-neutral-400 hover:bg-white/10'
                 }`}
               >
                 {cat}
               </button>
             ))}
           </div>
-        </motion.div>
+          <div className="flex items-center gap-2 text-neutral-500">
+             <Filter className="w-4 h-4" />
+             <span className="text-[10px] font-black uppercase tracking-widest">{filteredItems.length} Projects Loaded</span>
+          </div>
+        </div>
       </section>
 
-      <section className="relative z-10 pb-32 px-6 lg:px-8 max-w-7xl mx-auto">
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          <AnimatePresence mode="popLayout">
-            {filteredItems.map((item, i) => (
+      {/* Grid Section */}
+      <section className="py-24 px-6 lg:px-12">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+            {filteredItems.map((item, idx) => (
               <motion.div
-                key={item.title}
-                layout
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                className="group relative"
+                key={item.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx % 2 * 0.1 }}
+                className="group cursor-none"
               >
-                {/* Ambient Glow */}
-                <div className="absolute -inset-1 bg-gradient-to-br from-primary-500/20 to-transparent rounded-[3rem] opacity-0 group-hover:opacity-100 blur transition-all duration-700"></div>
-
-                <div className="relative aspect-[4/5.5] rounded-[3rem] overflow-hidden border border-white/10 glass-card transition-all duration-700 group-hover:border-primary-500/30">
-                  <img 
-                    src={item.image} 
-                    alt={item.title} 
-                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 grayscale group-hover:grayscale-0" 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-700"></div>
-                  
-                  <div className="absolute inset-0 p-10 flex flex-col justify-end">
-                    <div className="overflow-hidden mb-2">
-                       <p className="text-primary-400 text-[10px] font-black uppercase tracking-[0.3em] transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                         {item.meta}
-                       </p>
+                <Link to={`/portfolio/${item.id}`}>
+                  <div className="relative aspect-[16/10] overflow-hidden rounded-[2rem] border border-white/10 mb-8">
+                    <img 
+                      src={item.image} 
+                      alt={item.title} 
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 filter grayscale group-hover:grayscale-0"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    {/* Hover Content */}
+                    <div className="absolute bottom-8 left-8 right-8 flex items-end justify-between translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                      <div>
+                        <p className="text-primary-500 font-black text-xs uppercase tracking-widest mb-2">{item.metric}</p>
+                        <div className="flex gap-2">
+                          {item.tags.map(tag => (
+                            <span key={tag} className="text-[8px] font-bold uppercase tracking-widest px-2 py-1 bg-white/10 backdrop-blur-md rounded-full">{tag}</span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-dark-950">
+                        <ArrowRight className="w-6 h-6" />
+                      </div>
                     </div>
-                    <h3 className="text-3xl lg:text-4xl font-black text-white mb-4 italic leading-none tracking-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-neutral-400 text-sm leading-relaxed mb-8 line-clamp-2 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 font-medium">
-                      {item.desc}
-                    </p>
-                    <Link to={`/portfolio/${item.id}`} className="flex items-center gap-3 text-white font-black uppercase text-[10px] tracking-widest group/btn border-b border-white/10 w-fit pb-1 hover:border-primary-500 transition-all">
-                       Examine Work <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-2 transition-transform color-primary-500" />
-                    </Link>
                   </div>
-                </div>
+                  
+                  <div className="px-4">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-[10px] font-black uppercase tracking-widest text-primary-500 px-3 py-1 bg-primary-500/10 rounded-full">{item.category}</span>
+                    </div>
+                    <h3 className="text-4xl font-black uppercase tracking-tighter mb-4 italic group-hover:text-primary-500 transition-colors">{item.title}</h3>
+                    <p className="text-neutral-400 font-medium leading-relaxed max-w-lg">{item.desc}</p>
+                  </div>
+                </Link>
               </motion.div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-48 px-6 text-center bg-white text-dark-950">
+         <div className="max-w-4xl mx-auto">
+            <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-12 italic">Your Project <br/>Is Next.</h2>
+            <Link 
+              to="/onboarding" 
+              className="group relative inline-flex items-center gap-4 px-12 py-6 bg-dark-950 text-white font-black uppercase tracking-[0.2em] text-sm overflow-hidden hover:scale-105 active:scale-95 transition-all duration-500"
+            >
+              Initiate Onboarding
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+            </Link>
+         </div>
       </section>
     </div>
   );
