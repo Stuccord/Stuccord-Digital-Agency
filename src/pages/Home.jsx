@@ -3,9 +3,6 @@ import Hero from '../components/Hero';
 import Trust from '../components/Trust';
 import SystemDiagnostics from '../components/SystemDiagnostics';
 import Services from '../components/Services';
-import About from '../components/About';
-import Process from '../components/Process';
-import CTA from '../components/CTA';
 import SEO from '../components/SEO';
 
 const Home = () => {
@@ -19,12 +16,12 @@ const Home = () => {
       <Trust />
       <SystemDiagnostics />
       <Services />
-      {/* Temporarily disabling Work and Testimonials to see if they are the cause */}
+      {/* Disabling all final sections to find the crash */}
       {/* <Work /> */}
-      <About />
-      <Process />
+      {/* <About /> */}
+      {/* <Process /> */}
       {/* <Testimonials /> */}
-      <CTA />
+      {/* <CTA /> */}
     </>
   );
 };
