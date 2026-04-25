@@ -20,7 +20,7 @@ const CTA = () => {
             <ArrowRight className="w-6 h-6 text-dark-950 -rotate-45" />
           </div>
           <p className="text-dark-950 text-xl md:text-2xl font-bold leading-snug">
-            Stop settling for average. Let's engineer a digital product that commands your market.
+            Stop settling for less. Build a high-quality website that wins more customers.
           </p>
         </motion.div>
         
@@ -30,7 +30,7 @@ const CTA = () => {
            viewport={{ once: true }}
         >
           <Link to="/onboarding" className="inline-flex items-center gap-4 px-10 py-5 bg-dark-950 text-white text-sm font-black uppercase tracking-widest hover:bg-dark-800 transition-colors group overflow-hidden relative">
-            <span className="relative z-10">Start Your Application</span>
+            <span className="relative z-10">Start Your Project</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform relative z-10" />
             <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </Link>
@@ -46,7 +46,7 @@ const CTA = () => {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-5xl md:text-[10vw] font-black text-dark-950 leading-[0.75] tracking-tighter uppercase group-hover:text-white transition-colors duration-700 break-words"
           >
-            Let's Build.
+            Start Growing.
           </motion.h2>
           <motion.div 
             initial={{ scale: 0 }}
